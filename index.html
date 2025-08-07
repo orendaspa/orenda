@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link rel="stylesheet" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?display=swap&family=Manrope:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900" />
+    <title>Orenda Spa</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      // 弹窗控制
+      function openModal(id) {
+        document.getElementById(id).classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+      }
+      function closeModal(id) {
+        document.getElementById(id).classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('.orenda-modal-bg').forEach(bg => {
+          bg.addEventListener('click', function(e) {
+            if (e.target === bg) {
+              bg.classList.add('hidden');
+              document.body.classList.remove('overflow-hidden');
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f1f3f4] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#121516]">
+            <div class="size-16">
+              <img src="figures/logo.jpg" alt="Orenda Spa Logo" class="w-full h-full object-contain" />
+            </div>
+            <h2 class="text-[#121516] text-lg font-bold leading-tight tracking-[-0.015em]">Orenda Spa</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-[#121516] text-sm font-medium leading-normal" href="index.html">Home</a>  
+              <a class="text-[#121516] text-sm font-medium leading-normal" href="services.html">Services</a>
+              <a class="text-[#121516] text-sm font-medium leading-normal" href="events.html">Events</a>
+              <a class="text-[#121516] text-sm font-medium leading-normal" href="about.html">About</a>
+              <a class="text-[#121516] text-sm font-medium leading-normal" href="contact.html">Contact</a>
+            </div>
+            <a
+              href="booking.html"
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#b2d8e5] text-[#121516] text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+              <span class="truncate">Book Now</span>
+            </a>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="@container">
+              <div class="@[480px]:p-4">
+                <div
+                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
+                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAjwts7Z7zF_jXgd8uSSJrdxYObzbdBmXulB39dKe3X7pJ-WpFRaUT8Y-YPAlEkv_Jk679Q6cOcCzsUvEDk2QY8gAk93gvK2g70LfZnTfkHTZvjvqkHOrdl_N8NUudI6VOyQPODfRdWn8lrXxG3-MNVrtgwwBf4fiIBlzGJc9PJqgeSXaOfsrv7nQqLjLnVQYBwELhVRMtgeymbFF71cBKIiFYqMyrn0RB1gV_H8gLjh_Grw0Nb8rhbZJ3wZLAtrbGnJRLLNALNPWsA");'
+                >
+                  <div class="flex flex-col gap-2 text-center">
+                    <h1
+                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                    >
+                      Welcome to Orenda Spa
+                    </h1>
+                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                      Discover a sanctuary of tranquility and rejuvenation. Our expert therapists are dedicated to providing personalized experiences that enhance your well-being.
+                    </h2>
+                  </div>
+                  <a
+                    href="booking.html"
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#b2d8e5] text-[#121516] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                  >
+                    <span class="truncate">Book Your Escape</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Our Services Section -->
+            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Our Services</h2>
+            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              <div class="flex items-stretch p-4 gap-3">
+                <!-- Facial Treatments -->
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("figures/facial.jpeg");'
+                  ></div>
+                  <div>
+                    <p class="text-[#121516] text-base font-medium leading-normal">Facial Treatments</p>
+                    <p class="text-[#6a7b81] text-sm font-normal leading-normal">
+                      Experience our luxurious facial treatments tailored to your unique skin needs. Our professional estheticians use high-quality products to cleanse, rejuvenate, and nourish your skin for a radiant, healthy glow.
+                    </p>
+                  </div>
+                </div>
+                <!-- Back & Foot Treatments -->
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("figures/back.jpg");'
+                  ></div>
+                  <div>
+                    <p class="text-[#121516] text-base font-medium leading-normal">Back &amp; Foot Treatments</p>
+                    <p class="text-[#6a7b81] text-sm font-normal leading-normal">
+                      Relieve tension and restore comfort with our specialized back and foot treatments. Perfect for soothing sore muscles and improving circulation, these therapies offer deep relaxation and lasting relief.
+                    </p>
+                  </div>
+                </div>
+                <!-- Waxing -->
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
+                    style='background-image: url("figures/wax.jpeg");'
+                  ></div>
+                  <div>
+                    <p class="text-[#121516] text-base font-medium leading-normal">Waxing</p>
+                    <p class="text-[#6a7b81] text-sm font-normal leading-normal">
+                      Achieve beautifully smooth skin with our gentle and effective waxing services. Our experienced professionals ensure a comfortable process tailored to your needs, leaving you feeling fresh and confident.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of Our Services Section -->
+
+            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Events</h2>
+            <div class="p-4">
+              <div class="relative flex flex-col items-center rounded-xl bg-[#b2d8e511] shadow-md w-full">
+                <!-- 活动图片 -->
+                <img
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80"
+                  alt="Spa Welcome"
+                  class="rounded-t-xl w-full aspect-[2.3/1] object-cover"
+                />
+                <!-- 活动折扣角标 -->
+                <div class="absolute -top-4 left-4 flex items-center gap-2 bg-[#b2d8e5] px-4 py-1 rounded-full shadow text-[#121516] font-extrabold text-lg shadow-md">
+                  <!-- Sparkle Icon -->
+                  <svg width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#2e6470" d="M10 2.5c.28 0 .54.15.67.39l1.83 3.23a1 1 0 0 0 .55.44l3.54 1.09a.75.75 0 0 1 0 1.43l-3.54 1.1a1 1 0 0 0-.55.44L10.68 14.1a.75.75 0 0 1-1.36 0L7.5 10.62a1 1 0 0 0-.54-.44l-3.54-1.09a.75.75 0 0 1 0-1.43l3.54-1.1a1 1 0 0 0 .54-.44L9.32 2.89A.75.75 0 0 1 10 2.5Z"/></svg>
+                  20% OFF
+                </div>
+                <!-- 活动主信息 -->
+                <div class="flex flex-col gap-2 px-8 py-8 items-center w-full">
+                  <!-- 手心icon -->
+                  <div class="mb-2">
+                    <svg fill="none" viewBox="0 0 32 32" width="48" height="48" class="mx-auto">
+                      <circle cx="16" cy="16" r="16" fill="#b2d8e5"/>
+                      <path d="M10 15v5a4 4 0 1 0 8 0v-8h2.5A1.5 1.5 0 0 1 22 13.5v3" stroke="#2e6470" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M14 15v5a2 2 0 0 0 4 0v-6" stroke="#2e6470" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <h1 class="text-3xl font-extrabold text-[#162124] text-center">New Customer Welcome Offer</h1>
+                  <p class="text-[#486c74] text-base font-medium text-center">
+                    First time at Orenda Spa? <span class="text-[#2e6470] font-bold">Enjoy 20% OFF</span> your first service — any treatment, any time!
+                  </p>
+                  <ul class="flex flex-col items-center gap-1 text-base text-[#637f88] mt-2">
+                    <li class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-[#b2d8e5]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 6.293a1 1 0 0 0-1.414 0l-6.293 6.293-2.793-2.793A1 1 0 0 0 4.293 11.707l3.5 3.5a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z"/></svg>
+                      No code needed, just mention this offer at your first visit
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-[#b2d8e5]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 6.293a1 1 0 0 0-1.414 0l-6.293 6.293-2.793-2.793A1 1 0 0 0 4.293 11.707l3.5 3.5a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z"/></svg>
+                      Any facial, massage, or wellness treatment included
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-[#b2d8e5]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 6.293a1 1 0 0 0-1.414 0l-6.293 6.293-2.793-2.793A1 1 0 0 0 4.293 11.707l3.5 3.5a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z"/></svg>
+                      One-time use, for new clients only
+                    </li>
+                  </ul>
+                  <a
+                    href="booking.html"
+                    class="flex mt-5 bg-[#b2d8e5] hover:bg-[#98cbe0] px-8 py-3 rounded-full text-lg font-bold text-[#121516] shadow-md transition shadow-[#8cd6ef22]"
+                  >
+                    Book Now &amp; Save 20%
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- End of Events Section -->
+
+            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">News</h2>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-xl">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#121516] text-base font-bold leading-tight">Orenda Spa Unveils a Symphony of Sustainable Luxury with Aveda’s Vegan Elixirs
+                    Rockville, Aug 5, 2025— Orenda Spa, an oasis of transcendent wellness in Rockville, is honored to announce its exclusive collaboration with Aveda, the vanguard of luxe, plant-powered beauty.</p>
+                    <p class="text-[#6a7b81] text-sm font-normal leading-normal">Beginning Aug 2025, discerning guests will indulge in bespoke rituals crafted from Aveda’s biotech-infused skincare and body collections-where scientific brilliance meets botanical artistry, all cradled in vegan purity and environmental reverence.</p>
+                  </div>
+                  <a
+                    href="services.html" 
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#f1f3f4] text-[#121516] text-sm font-medium leading-normal w-fit"
+                  >
+                    <span class="truncate">Discover Now</span>
+                  </a>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
+                  style='background-image: url("figures/news1.jpg");'
+                ></div>
+              </div>
+            </div>
+            <!-- moved Customer Reviews here -->
+            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Customer Reviews</h2>
+            <div class="flex flex-col gap-8 overflow-x-hidden bg-white p-4">
+              <div class="flex flex-col gap-3 bg-white">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvbzEUcT6MEISu1DjzXn6I5R5ILfhIDYcyyFJPdoZkr8gO1wzV1rtZtN9-7finy4DcSv7iMX1CDJlOtN-UrX2vOHlW_pTaAu91yYUuDlYd4RaZMp4qnPH_Uva3iZJUYAUk6j41qw22l6vayTKBuxf93idBanGQEbqs1jKpIIp4hKdRrzqArrDk3M2NRxX4ylam4k55zgtLl89y1K28Ed3YIsb5nK7eQn010CXUMaJvwHRpYNAsKa9BCRl7X6dsnnIwKyRKaZSiXnDX");'
+                  ></div>
+                  <div class="flex-1">
+                    <p class="text-[#121516] text-base font-medium leading-normal">Olivia Harper</p>
+                    <p class="text-[#6a7b81] text-sm font-normal leading-normal">July 15, 2024</p>
+                  </div>
+                </div>
+                <div class="flex gap-0.5">
+                  <!-- stars SVG，省略 -->
+                </div>
+                <p class="text-[#121516] text-base font-normal leading-normal">
+                  "Orenda Spa is a true oasis. The staff is incredibly professional, and the treatments are top-notch. I left feeling completely refreshed and rejuvenated."
+                </p>
+              </div>
+              <div class="flex flex-col gap-3 bg-white">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD36PMDfFsKBxsjYy4r1SkJZqKsf11LJhMUhadOSWEStAyH13dR64iCCRYLIu2oZg7UtWxM0J0dOtm2KUpziOjqgAyhhdzYtciMJQhR5qHYICimkMlOSpwyM4-FGzGklJD7sJV-d4nu-E4guI1zs6rQtR_qOjaaRhNV6nOVwO76Njxat9aq9s1_1QCnaGCXm6o5daFWCA-mw8AmHdtXOCxuZzEJJdmG11YnF0oK-moqFrsZh7fRZ09mP8_1gnkClJR7XpmjXoy-46Dm");'
+                  ></div>
+                  <div class="flex-1">
+                    <p class="text-[#121516] text-base font-medium leading-normal">Liam Bennett</p>
+                    <p class="text-[#6a7b81] text-sm font-normal leading-normal">June 20, 2024</p>
+                  </div>
+                </div>
+                <div class="flex gap-0.5">
+                  <!-- stars SVG，省略 -->
+                </div>
+                <p class="text-[#121516] text-base font-normal leading-normal">
+                  "I had an amazing experience at Orenda Spa. The atmosphere is so calming, and the massage was perfect. I highly recommend it!"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="flex justify-center">
+          <div class="flex max-w-[960px] flex-1 flex-col">
+            <div class="flex flex-col gap-6 px-5 py-10 text-center @container">
+              <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+                <a href="javascript:void(0);" onclick="openModal('privacy-modal')" class="text-[#6a7b81] text-base font-normal leading-normal min-w-40 cursor-pointer">Privacy Policy</a>
+                <a href="javascript:void(0);" onclick="openModal('terms-modal')" class="text-[#6a7b81] text-base font-normal leading-normal min-w-40 cursor-pointer">Terms of Service</a>
+                <a class="text-[#6a7b81] text-base font-normal leading-normal min-w-40" href="contact.html">Contact Us</a>
+              </div>
+              <div class="flex flex-wrap justify-center gap-4">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/orendaspa2025?igsh=anl5M3kyMHd5bG84&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                      viewBox="0 0 256 256" class="w-6 h-6 text-[#6a7b81] hover:text-[#b2d8e5] transition">
+                    <path
+                      d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/>
+                  </svg>
+                </a>
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/share/p/1EYyjutKAo/" target="_blank" rel="noopener noreferrer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                      viewBox="0 0 256 256" class="w-6 h-6 text-[#6a7b81] hover:text-[#b2d8e5] transition">
+                    <path
+                      d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"/>
+                  </svg>
+                </a>
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@orendaspa2025?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">
+                  <!-- SimpleIcons Tiktok SVG -->
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24" class="w-6 h-6 text-[#6a7b81] hover:text-[#b2d8e5] transition">
+                    <path d="M12.389 2.031h3.157a4.185 4.185 0 0 0 4.183 4.174v3.159a7.409 7.409 0 0 1-3.316-.427v7.803c0 3.893-3.158 7.058-7.046 7.058a7.062 7.062 0 1 1 0-14.125c.086 0 .172.004.257.006v3.16a3.899 3.899 0 1 0 3.899 3.899V2.031z"/>
+                  </svg>
+                </a>
+              </div>
+              <p class="text-[#6a7b81] text-base font-normal leading-normal">© 2025 Orenda Spa. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
+        <!-- Privacy Policy 弹窗 -->
+        <div id="privacy-modal" class="fixed orenda-modal-bg hidden z-50 inset-0 flex items-center justify-center bg-black/40">
+          <div class="bg-white rounded-2xl shadow-xl max-w-lg w-[95vw] p-8 relative border border-[#ebf3f6] flex flex-col items-center text-[#111618]">
+            <h2 class="text-xl font-extrabold mb-3">Privacy Policy</h2>
+            <div class="text-left text-[#617f89] text-base mb-6 max-h-[50vh] overflow-y-auto space-y-5">
+
+              <p>At Orenda Spa, your privacy is very important to us. Any personal information you provide as part of booking an appointment will only be used for service provision and communication related to your booking. We do not share your details with third parties except as required by law. All online data is transmitted securely. By booking you agree to our use of your data as outlined here. You may request to view, edit, or permanently delete your data at any time by contacting us.</p>
+              
+              <div>
+                <h3 class="font-bold text-[#162124] mb-1">1. What Information We Collect</h3>
+                <ul class="list-disc list-inside space-y-1">
+                  <li><strong>Personal Details:</strong> Name, contact info, birthdate (for age verification), and payment details.</li>
+                  <li><strong>Health/Preferences:</strong> Skin concerns, allergies, or service notes (so we can keep you safe and pampered).</li>
+                  <li><strong>Automated Data:</strong> Website usage via cookies (like how long you stared at our CBD massage page).</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="font-bold text-[#162124] mb-1">2. How We Use Your Info</h3>
+                <ul class="list-disc list-inside space-y-1">
+                  <li><strong>To Spa Like a Boss:</strong> Book appointments, customize treatments, and send confirmations.</li>
+                  <li><strong>For Legal &amp; Safety Reasons:</strong> Comply with Maryland licensing laws or process insurance claims.</li>
+                  <li><strong>Marketing (Only with Consent!):</strong> Occasional emails about new services or promos (opt-out anytime).</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="font-bold text-[#162124] mb-1">3. Who We Share With</h3>
+                <ul class="list-disc list-inside space-y-1">
+                  <li><strong>Never Sold:</strong> We don’t trade your data for mani-pedis or crypto.</li>
+                  <li><strong>Trusted Partners:</strong> Payment processors or software providers (they’re legally bound to protect you).</li>
+                  <li><strong>If Required by Law:</strong> Like a court order (we’ll object unless totally necessary).</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="font-bold text-[#162124] mb-1">4. Your Rights</h3>
+                <ul class="list-disc list-inside space-y-1">
+                  <li><strong>Access/Update:</strong> Email <a href="mailto:orendaspa2025@gmail.com" class="underline text-[#13b5eb]">orendaspa2025@gmail.com</a> to correct your preferences (e.g., “Stop calling me ‘Dry Skin Sally’”).</li>
+                  <li><strong>Delete Data:</strong> Request removal unless legally required to keep it.</li>
+                  <li><strong>Opt-Out:</strong> Unsubscribe from emails via the link in every message.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="font-bold text-[#162124] mb-1">5. Security Measures</h3>
+                <ul class="list-disc list-inside space-y-1">
+                  <li>We use encryption (fancy tech armor) and limit staff access to your data.</li>
+                  <li>No Wi-Fi is 100% hacker-proof—so we don’t store sensitive info like full credit card numbers.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="font-bold text-[#162124] mb-1">6. Policy Updates</h3>
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Changes will be posted here (we’ll pinky-swear not to sneak anything shady).</li>
+                </ul>
+              </div>
+
+            </div>
+            <button onclick="closeModal('privacy-modal')" class="mt-2 px-5 py-2 rounded-full bg-[#13b5eb] text-white font-semibold shadow hover:bg-[#b2d8e5] transition">
+              Acknowledge
+            </button>
+            <button onclick="closeModal('privacy-modal')" class="absolute top-3 right-4 text-[#b2d8e5] hover:text-[#13b5eb] text-xl font-bold bg-transparent border-0">×</button>
+          </div>
+        </div>
+        <!-- END Privacy Policy 弹窗 -->
+        <!-- Terms of Service 弹窗 -->
+        <div id="terms-modal" class="fixed orenda-modal-bg hidden z-50 inset-0 flex items-center justify-center bg-black/40">
+          <div class="bg-white rounded-2xl shadow-xl max-w-lg w-[95vw] p-8 relative border border-[#ebf3f6] flex flex-col items-center text-[#111618]">
+            <h2 class="text-xl font-extrabold mb-3">Terms of Service</h2>
+            <div class="text-left text-[#617f89] text-base mb-6 max-h-[50vh] overflow-y-auto space-y-5">
+
+              <p class="mb-3">
+                By booking with Orenda Spa, you agree to our policies regarding appointments, cancellations, and payments. Please arrive on time for your session. Late arrivals may result in shortened treatment time.
+                Cancellations should be made at least 24 hours in advance. Failure to do so may result in a cancellation fee.
+                Our staff is committed to providing you with a safe, clean, and relaxing environment. Please notify us of any health conditions or concerns before your treatment.
+              </p>
+
+              <div>
+                <h3 class="font-bold text-[#162124] mb-1">1. Spa Etiquette (AKA Don’t Be That Person)</h3>
+                <ul class="list-disc list-inside space-y-1">
+                  <li><strong>Late Arrivals:</strong> Arriving more than 15 minutes late means your service may be shortened (we love you, but our next client does too).</li>
+                  <li><strong>Cancellations:</strong> Please give at least 24 hours’ notice or a 50% fee applies (emergencies? Just talk to us—we’re human).</li>
+                  <li><strong>No-Shows:</strong> Will be charged the full price (we’ll cry while depositing your payment).</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="font-bold text-[#162124] mb-1">2. Health &amp; Safety</h3>
+                <ul class="list-disc list-inside space-y-1">
+                  <li><strong>Patch Tests:</strong> Required for certain treatments (unless you <em>want</em> to audition for a lobster role).</li>
+                  <li><strong>Medical Conditions:</strong> Please disclose allergies, pregnancy, or anything else we should know—we’re estheticians, not psychics.</li>
+                  <li><strong>Illness:</strong> If you have a fever or cold, please reschedule (we’ll reward you with extra hand-holding next time).</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="font-bold text-[#162124] mb-1">3. Payments &amp; Refunds</h3>
+                <ul class="list-disc list-inside space-y-1">
+                  <li><strong>Cards on File:</strong> Required for all bookings (no, we don’t accept IOUs or TikTok fame).</li>
+                  <li><strong>Gift Cards:</strong> No refunds, but they never expire (unlike your ex’s apologies).</li>
+                  <li><strong>Service Issues:</strong> Tell us within 48 hours for a fix—silent suffering isn’t a loyalty program.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="font-bold text-[#162124] mb-1">4. Liability</h3>
+                <ul class="list-disc list-inside space-y-1">
+                  <li><strong>Skin Reactions:</strong> Rare, but possible—we’ll do everything to prevent them (but you can’t sue us over that one blackhead).</li>
+                  <li><strong>Lost Items:</strong> We can’t be responsible for left-behind earrings or emotional baggage.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="font-bold text-[#162124] mb-1">5. Intellectual Property</h3>
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Our spa name, logo, and secret serum blends are &copy; Orenda Spa (but feel free to tag us in your selfies!).</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="font-bold text-[#162124] mb-1">6. Changes to Terms</h3>
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Any updates will be posted here. By continuing to book, you’re pinky-swearing you agree.</li>
+                </ul>
+              </div>
+            </div>
+            <button onclick="closeModal('terms-modal')" class="mt-2 px-5 py-2 rounded-full bg-[#13b5eb] text-white font-semibold shadow hover:bg-[#b2d8e5] transition">
+              Acknowledge
+            </button>
+            <button onclick="closeModal('terms-modal')" class="absolute top-3 right-4 text-[#b2d8e5] hover:text-[#13b5eb] text-xl font-bold bg-transparent border-0">×</button>
+          </div>
+        </div>
+        <!-- END Terms of Service 弹窗 -->
+        <!-- END 弹窗 -->
+      </div>
+    </div>
+  </body>
+</html>

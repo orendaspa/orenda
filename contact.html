@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f1f3f4] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#121516]">
+            <div class="size-16">
+              <img src="figures/logo.jpg" alt="Orenda Spa Logo" class="w-full h-full object-contain" />
+            </div>
+            <h2 class="text-[#121516] text-lg font-bold leading-tight tracking-[-0.015em]">Orenda Spa</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-[#121516] text-sm font-medium leading-normal" href="index.html">Home</a>
+              <a class="text-[#121516] text-sm font-medium leading-normal" href="services.html">Services</a>
+              <a class="text-[#121516] text-sm font-medium leading-normal" href="events.html">Events</a>
+              <a class="text-[#121516] text-sm font-medium leading-normal" href="about.html">About</a>
+              <a class="text-[#121516] text-sm font-medium leading-normal" href="contact.html">Contact</a>
+            </div>
+            <a
+              href="booking.html"
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#b2d8e5] text-[#121516] text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+              <span class="truncate">Book Now</span>
+            </a>
+          </div>
+        </header>
+        <!-- 内容部分 -->
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-[#121614] tracking-light text-[32px] font-bold leading-tight">Contact Us</p>
+                <p class="text-[#6a8175] text-sm font-normal leading-normal">We're here to help. Reach out to us with any questions or to book your next spa experience.</p>
+              </div>
+            </div>
+            <!-- 表单开始 -->
+            <form onsubmit="sendMessage(event)">
+              <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label class="flex flex-col min-w-40 flex-1">
+                  <p class="text-[#121614] text-base font-medium leading-normal pb-2">Your Name</p>
+                  <input
+                    id="contact-name"
+                    placeholder="Enter your name"
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#121614] focus:outline-0 focus:ring-0 border border-[#dde3e0] bg-white focus:border-[#dde3e0] h-14 placeholder:text-[#6a8175] p-[15px] text-base font-normal leading-normal"
+                    value=""
+                  />
+                </label>
+              </div>
+              <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label class="flex flex-col min-w-40 flex-1">
+                  <p class="text-[#121614] text-base font-medium leading-normal pb-2">Your Email</p>
+                  <input
+                    id="contact-email"
+                    placeholder="Enter your email"
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#121614] focus:outline-0 focus:ring-0 border border-[#dde3e0] bg-white focus:border-[#dde3e0] h-14 placeholder:text-[#6a8175] p-[15px] text-base font-normal leading-normal"
+                    value=""
+                  />
+                </label>
+              </div>
+              <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label class="flex flex-col min-w-40 flex-1">
+                  <p class="text-[#121614] text-base font-medium leading-normal pb-2">Subject</p>
+                  <input
+                    id="contact-subject"
+                    placeholder="Enter the subject"
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#121614] focus:outline-0 focus:ring-0 border border-[#dde3e0] bg-white focus:border-[#dde3e0] h-14 placeholder:text-[#6a8175] p-[15px] text-base font-normal leading-normal"
+                    value=""
+                  />
+                </label>
+              </div>
+              <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+                <label class="flex flex-col min-w-40 flex-1">
+                  <p class="text-[#121614] text-base font-medium leading-normal pb-2">Message</p>
+                  <textarea
+                    id="contact-message"
+                    placeholder="Enter your message"
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#121614] focus:outline-0 focus:ring-0 border border-[#dde3e0] bg-white focus:border-[#dde3e0] min-h-36 placeholder:text-[#6a8175] p-[15px] text-base font-normal leading-normal"
+                  ></textarea>
+                </label>
+              </div>
+              <div class="flex px-4 py-3 justify-start">
+                <button
+                  type="submit"
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#3fbf7f] text-[#121614] text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                  <span class="truncate">Send Message</span>
+                </button>
+              </div>
+            </form>
+            <!-- 表单结束 -->
+            <h2 class="text-[#121614] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Our Location</h2>
+            <div class="flex px-4 py-3">
+              <div class="w-full aspect-video rounded-xl overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps?q=966+Hungerford+Dr+28a+room3,+Rockville,+MD+20850&output=embed"
+                  width="100%"
+                  height="100%"
+                  frameborder="0"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+            <div class="w-full px-4 py-3 flex justify-center">
+              <div class="grid grid-cols-3 gap-4 w-full max-w-[960px]">
+                <img src="figures/location1.jpg" alt="Location view 1" class="aspect-square object-cover rounded-lg shadow border border-[#dde3e0] w-full h-full" loading="lazy">
+                <img src="figures/location2.jpg" alt="Location view 2" class="aspect-square object-cover rounded-lg shadow border border-[#dde3e0] w-full h-full" loading="lazy">
+                <img src="figures/location3.jpg" alt="Location view 3" class="aspect-square object-cover rounded-lg shadow border border-[#dde3e0] w-full h-full" loading="lazy">
+                <img src="figures/location4.jpg" alt="Location view 4" class="aspect-square object-cover rounded-lg shadow border border-[#dde3e0] w-full h-full" loading="lazy">
+                <img src="figures/location5.jpg" alt="Location view 5" class="aspect-square object-cover rounded-lg shadow border border-[#dde3e0] w-full h-full" loading="lazy">
+                <img src="figures/location6.jpg" alt="Location view 6" class="aspect-square object-cover rounded-lg shadow border border-[#dde3e0] w-full h-full" loading="lazy">
+              </div>
+            </div>
+            <p class="text-[#121614] text-base font-normal leading-normal pb-3 pt-1 px-4">966 Hungerford Dr 28a room3, Rockville, MD 20850</p>
+            <p class="text-[#121614] text-base font-normal leading-normal pb-3 pt-1 px-4">(227) 268-3171</p>
+            <p class="text-[#121614] text-base font-normal leading-normal pb-3 pt-1 px-4">orendaspa2025@gmail.com </p>
+            <h2 class="text-[#121614] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Business Hours</h2>
+            <div class="p-4 grid grid-cols-[20%_1fr] gap-x-6">
+              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#dde3e0] py-5">
+                <p class="text-[#6a8175] text-sm font-normal leading-normal">Monday</p>
+                <p class="text-[#121614] text-sm font-normal leading-normal">Cloased</p>
+              </div>
+              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#dde3e0] py-5">
+                <p class="text-[#6a8175] text-sm font-normal leading-normal">Tuesday</p>
+                <p class="text-[#121614] text-sm font-normal leading-normal">9:30 AM - 5:30 PM</p>
+              </div>
+              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#dde3e0] py-5">
+                <p class="text-[#6a8175] text-sm font-normal leading-normal">Wednesday</p>
+                <p class="text-[#121614] text-sm font-normal leading-normal">9:30 AM - 5:30 PM</p>
+              </div>
+              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#dde3e0] py-5">
+                <p class="text-[#6a8175] text-sm font-normal leading-normal">Thursday</p>
+                <p class="text-[#121614] text-sm font-normal leading-normal">9:30 AM - 5:30 PM</p>
+              </div>
+              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#dde3e0] py-5">
+                <p class="text-[#6a8175] text-sm font-normal leading-normal">Friday</p>
+                <p class="text-[#121614] text-sm font-normal leading-normal">9:30 AM - 5:30 PM</p>
+              </div>
+              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#dde3e0] py-5">
+                <p class="text-[#6a8175] text-sm font-normal leading-normal">Saturday</p>
+                <p class="text-[#121614] text-sm font-normal leading-normal">10 AM - 6 PM</p>
+              </div>
+              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#dde3e0] py-5">
+                <p class="text-[#6a8175] text-sm font-normal leading-normal">Sunday</p>
+                <p class="text-[#121614] text-sm font-normal leading-normal">10 AM - 6 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Footer -->
+        <footer class="flex justify-center">
+          <div class="flex max-w-[960px] flex-1 flex-col">
+            <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+              <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+                <a class="text-[#6a7b81] text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
+                <a class="text-[#6a7b81] text-base font-normal leading-normal min-w-40" href="#">Terms of Service</a>
+                <a class="text-[#6a7b81] text-base font-normal leading-normal min-w-40" href="contact.html">Contact Us</a>
+              </div>
+              <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://www.instagram.com/orendaspa2025?igsh=anl5M3kyMHd5bG84&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                  <!-- Instagram SVG ... -->
+                </a>
+                <a href="https://www.facebook.com/share/p/1EYyjutKAo/" target="_blank" rel="noopener noreferrer">
+                  <!-- Facebook SVG ... -->
+                </a>
+                <a href="https://www.tiktok.com/@orendaspa2025?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">
+                  <!-- TikTok SVG ... -->
+                </a>
+              </div>
+              <p class="text-[#6a7b81] text-base font-normal leading-normal">© 2025 Orenda Spa. All rights reserved.</p>
+            </footer>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script>
+      function validateEmail(email) {
+        // 简易邮箱校验
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+
+      async function sendMessage(event) {
+        event.preventDefault();
+        const name = document.getElementById('contact-name').value.trim();
+        const email = document.getElementById('contact-email').value.trim();
+        const subject = document.getElementById('contact-subject').value.trim();
+        const message = document.getElementById('contact-message').value.trim();
+
+        if (!name) {
+          alert('Please enter your name.');
+          return;
+        }
+        if (!email) {
+          alert('Please enter your email.');
+          return;
+        }
+        if (!validateEmail(email)) {
+          alert('Please enter a valid email address.');
+          return;
+        }
+        if (!subject) {
+          alert('Please enter the subject.');
+          return;
+        }
+
+        try {
+          const res = await fetch("http://localhost:3000/send", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name, email, subject, message })
+          });
+          const data = await res.json();
+          if (data.success) {
+            alert('Message sent!');
+            // 可选：清空表单
+            document.getElementById('contact-name').value = '';
+            document.getElementById('contact-email').value = '';
+            document.getElementById('contact-subject').value = '';
+            document.getElementById('contact-message').value = '';
+          } else {
+            alert('Failed to send email: ' + (data.error || 'Unknown error'));
+          }
+        } catch (error) {
+          alert('Failed to send email: ' + error.toString());
+        }
+      }
+    </script>
+  </body>
+</html>
