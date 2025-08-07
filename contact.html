@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
     <link
       rel="stylesheet"
@@ -8,10 +10,8 @@
       onload="this.rel='stylesheet'"
       href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
     />
-
     <title>Stitch Design</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   </head>
   <body>
@@ -41,7 +41,7 @@
           </div>
         </header>
         <!-- 内容部分 -->
-        <div class="px-40 flex flex-1 justify-center py-5">
+        <div class="px-4 md:px-40 flex flex-1 justify-center py-5">
           <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
             <div class="flex flex-wrap justify-between gap-3 p-4">
               <div class="flex min-w-72 flex-col gap-3">
@@ -112,15 +112,16 @@
                   width="100%"
                   height="100%"
                   frameborder="0"
-                  style="border:0;"
+                  style="border:0; min-height:200px;"
                   allowfullscreen=""
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
               </div>
             </div>
+            <!-- 六张图片分组，独立一块 -->
             <div class="w-full px-4 py-3 flex justify-center">
-              <div class="grid grid-cols-3 gap-4 w-full max-w-[960px]">
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-[960px]">
                 <img src="figures/location1.jpg" alt="Location view 1" class="aspect-square object-cover rounded-lg shadow border border-[#dde3e0] w-full h-full" loading="lazy">
                 <img src="figures/location2.jpg" alt="Location view 2" class="aspect-square object-cover rounded-lg shadow border border-[#dde3e0] w-full h-full" loading="lazy">
                 <img src="figures/location3.jpg" alt="Location view 3" class="aspect-square object-cover rounded-lg shadow border border-[#dde3e0] w-full h-full" loading="lazy">
@@ -129,9 +130,12 @@
                 <img src="figures/location6.jpg" alt="Location view 6" class="aspect-square object-cover rounded-lg shadow border border-[#dde3e0] w-full h-full" loading="lazy">
               </div>
             </div>
-            <p class="text-[#121614] text-base font-normal leading-normal pb-3 pt-1 px-4">966 Hungerford Dr 28a room3, Rockville, MD 20850</p>
-            <p class="text-[#121614] text-base font-normal leading-normal pb-3 pt-1 px-4">(227) 268-3171</p>
-            <p class="text-[#121614] text-base font-normal leading-normal pb-3 pt-1 px-4">orendaspa2025@gmail.com </p>
+            <!-- 地址与电话信息，独立一块 -->
+            <div class="my-3 px-4">
+              <p class="text-[#121614] text-base font-normal leading-normal pb-1">966 Hungerford Dr 28a room3, Rockville, MD 20850</p>
+              <p class="text-[#121614] text-base font-normal leading-normal pb-1">(227) 268-3171</p>
+              <p class="text-[#121614] text-base font-normal leading-normal pb-1">orendaspa2025@gmail.com </p>
+            </div>
             <h2 class="text-[#121614] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Business Hours</h2>
             <div class="p-4 grid grid-cols-[20%_1fr] gap-x-6">
               <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#dde3e0] py-5">
@@ -175,15 +179,9 @@
                 <a class="text-[#6a7b81] text-base font-normal leading-normal min-w-40" href="contact.html">Contact Us</a>
               </div>
               <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://www.instagram.com/orendaspa2025?igsh=anl5M3kyMHd5bG84&utm_source=qr" target="_blank" rel="noopener noreferrer">
-                  <!-- Instagram SVG ... -->
-                </a>
-                <a href="https://www.facebook.com/share/p/1EYyjutKAo/" target="_blank" rel="noopener noreferrer">
-                  <!-- Facebook SVG ... -->
-                </a>
-                <a href="https://www.tiktok.com/@orendaspa2025?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">
-                  <!-- TikTok SVG ... -->
-                </a>
+                <a href="https://www.instagram.com/orendaspa2025?igsh=anl5M3kyMHd5bG84&utm_source=qr" target="_blank" rel="noopener noreferrer"></a>
+                <a href="https://www.facebook.com/share/p/1EYyjutKAo/" target="_blank" rel="noopener noreferrer"></a>
+                <a href="https://www.tiktok.com/@orendaspa2025?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer"></a>
               </div>
               <p class="text-[#6a7b81] text-base font-normal leading-normal">© 2025 Orenda Spa. All rights reserved.</p>
             </footer>
@@ -193,7 +191,6 @@
     </div>
     <script>
       function validateEmail(email) {
-        // 简易邮箱校验
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
       }
 
@@ -230,7 +227,6 @@
           const data = await res.json();
           if (data.success) {
             alert('Message sent!');
-            // 可选：清空表单
             document.getElementById('contact-name').value = '';
             document.getElementById('contact-email').value = '';
             document.getElementById('contact-subject').value = '';
