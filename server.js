@@ -1,11 +1,21 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
+const path = require("path");
 const app = express();
 const PORT = 3000;
 
+// 允许跨域、JSON解析
 app.use(cors());
 app.use(express.json());
+
+// 【静态文件托管】让 /index.html /booking.html /figures 等直接能访问
+app.use(express.static(path.join(__dirname, '.')));
+
+// 让 / 自动跳转首页
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 // 邮箱配置
 const transporter = nodemailer.createTransport({
@@ -28,7 +38,6 @@ app.post("/send", async (req, res) => {
       subject: subject,
       text: `Name: ${name}\nEmail: ${email}\n\n${message}`
     });
-
     res.json({ success: true, message: "Email sent!" });
   } catch (error) {
     res.status(500).json({ success: false, message: "Failed to send email.", error: error.toString() });
@@ -51,6 +60,7 @@ app.post("/api/bookings", async (req, res) => {
   }
 });
 
+// 启动服务
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
