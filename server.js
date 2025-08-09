@@ -10,11 +10,11 @@ app.use(cors());
 app.use(express.json());
 
 // 【静态文件托管】让 /index.html /booking.html /figures 等直接能访问
-app.use(express.static(path.join(__dirname, '.')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // 让 / 自动跳转首页
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // 邮箱配置
