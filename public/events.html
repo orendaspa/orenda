@@ -40,66 +40,199 @@
             </a>
           </div>
         </header>
+        
         <!-- 页面主体 -->
-        <div class="flex flex-1 justify-center py-10 bg-gradient-to-t from-[#e7f7fa] via-white to-white px-2">
-          <div class="layout-content-container flex flex-col max-w-[600px] w-full items-center gap-6">
-            <!-- 活动Banner Section -->
-            <div class="relative flex flex-col items-center rounded-xl bg-[#b2d8e511] shadow-md w-full">
-              <!-- 活动图片 -->
-              <img
-                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80"
-                alt="Spa Welcome"
-                class="rounded-t-xl w-full aspect-[2.3/1] object-cover"
-              />
-              <!-- 活动折扣角标 -->
-              <div class="absolute -top-4 left-4 flex items-center gap-2 bg-[#b2d8e5] px-4 py-1 rounded-full shadow text-[#121516] font-extrabold text-lg shadow-md">
-                <!-- Sparkle Icon -->
-                <svg width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#2e6470" d="M10 2.5c.28 0 .54.15.67.39l1.83 3.23a1 1 0 0 0 .55.44l3.54 1.09a.75.75 0 0 1 0 1.43l-3.54 1.1a1 1 0 0 0-.55.44L10.68 14.1a.75.75 0 0 1-1.36 0L7.5 10.62a1 1 0 0 0-.54-.44l-3.54-1.09a.75.75 0 0 1 0-1.43l3.54-1.1a1 1 0 0 0 .54-.44L9.32 2.89A.75.75 0 0 1 10 2.5Z"/></svg>
-                20% OFF
-              </div>
-              <!-- 活动主信息 -->
-              <div class="flex flex-col gap-2 px-8 py-8 items-center w-full">
-                <!-- 手心icon -->
-                <div class="mb-2">
-                  <svg fill="none" viewBox="0 0 32 32" width="48" height="48" class="mx-auto">
-                    <circle cx="16" cy="16" r="16" fill="#b2d8e5"/>
-                    <path d="M10 15v5a4 4 0 1 0 8 0v-8h2.5A1.5 1.5 0 0 1 22 13.5v3" stroke="#2e6470" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M14 15v5a2 2 0 0 0 4 0v-6" stroke="#2e6470" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
-                <h1 class="text-3xl font-extrabold text-[#162124] text-center">New Customer Welcome Offer</h1>
-                <p class="text-[#486c74] text-base font-medium text-center">
-                  First time at Orenda Spa? <span class="text-[#2e6470] font-bold">Enjoy 20% OFF</span> your first service — any treatment, any time!
-                </p>
-                <ul class="flex flex-col items-center gap-1 text-base text-[#637f88] mt-2">
-                  <li class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-[#b2d8e5]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 6.293a1 1 0 0 0-1.414 0l-6.293 6.293-2.793-2.793A1 1 0 0 0 4.293 11.707l3.5 3.5a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z"/></svg>
-                    No code needed, just mention this offer at your first visit
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-[#b2d8e5]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 6.293a1 1 0 0 0-1.414 0l-6.293 6.293-2.793-2.793A1 1 0 0 0 4.293 11.707l3.5 3.5a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z"/></svg>
-                    Any facial, massage, or wellness treatment included
-                  </li>
-                  <li class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-[#b2d8e5]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 6.293a1 1 0 0 0-1.414 0l-6.293 6.293-2.793-2.793A1 1 0 0 0 4.293 11.707l3.5 3.5a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z"/></svg>
-                    One-time use, for new clients only
-                  </li>
-                </ul>
-                <a
-                  href="booking.html"
-                  class="flex mt-5 bg-[#b2d8e5] hover:bg-[#98cbe0] px-8 py-3 rounded-full text-lg font-bold text-[#121516] shadow-md transition shadow-[#8cd6ef22]"
-                >
-                  Book Now &amp; Save 20%
-                </a>
-              </div>
+        <div class="flex flex-1 justify-center py-10 bg-gradient-to-t from-[#e7f7fa] via-white to-white px-4">
+          <div class="layout-content-container flex flex-col max-w-[1200px] w-full items-center gap-12">
+            
+            <!-- 页面标题 -->
+            <div class="text-center mb-8">
+              <h1 class="text-4xl lg:text-5xl font-black text-[#162124] mb-4">Current Events & Promotions</h1>
+              <p class="text-xl text-[#6a7b81] max-w-2xl mx-auto">Discover our latest offers and special treatments designed to enhance your wellness journey</p>
             </div>
 
-            <!-- 可继续未来加更多促销活动上新的区域 -->
+            <!-- Events容器 -->
+            <div class="w-full space-y-12">
+              
+              <!-- 第一个Event: Hydrating Facial -->
+              <div class="relative flex flex-col lg:flex-row items-center rounded-2xl bg-[#e8f4f8] shadow-lg w-full overflow-hidden">
+                <!-- 左侧内容区域 -->
+                <div class="lg:w-1/2 w-full p-8 lg:p-10 order-2 lg:order-1">
+                  <!-- 标题区域 -->
+                  <div class="text-center mb-8">
+                    <h1 class="text-3xl lg:text-4xl font-black text-[#162124] mb-4 leading-tight">
+                      Hydrogen Oxygen <span class="text-[#2e6470]">Hydrating Facial</span>
+                    </h1>
+                    <p class="text-[#486c74] text-xl font-medium">
+                      Experience the ultimate in skin rejuvenation with our advanced hydrating facial treatment
+                    </p>
+                  </div>
 
+                  <!-- 双栏布局：Benefits & Ideal for -->
+                  <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-white/50 backdrop-blur-sm p-6 rounded-xl border border-white/30">
+                      <h4 class="flex items-center text-[#2e6470] font-bold text-lg mb-4">
+                        <span class="mr-2">✨</span>Benefits
+                      </h4>
+                      <ul class="text-[#6a7b81] text-base space-y-3">
+                        <li class="flex items-center gap-3">
+                          <span class="w-2 h-2 bg-[#b2d8e5] rounded-full"></span>
+                          Smaller pores & improved texture
+                        </li>
+                        <li class="flex items-center gap-3">
+                          <span class="w-2 h-2 bg-[#b2d8e5] rounded-full"></span>
+                          Youthful glow & deep hydration
+                        </li>
+                        <li class="flex items-center gap-3">
+                          <span class="w-2 h-2 bg-[#b2d8e5] rounded-full"></span>
+                          Reduce fine lines & wrinkles
+                        </li>
+                        <li class="flex items-center gap-3">
+                          <span class="w-2 h-2 bg-[#b2d8e5] rounded-full"></span>
+                          Stimulate collagen production
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    <div class="bg-white/50 backdrop-blur-sm p-6 rounded-xl border border-white/30">
+                      <h4 class="flex items-center text-[#2e6470] font-bold text-lg mb-4">
+                        <span class="mr-2">🎯</span>Ideal For
+                      </h4>
+                      <ul class="text-[#6a7b81] text-base space-y-3">
+                        <li class="flex items-center gap-3">
+                          <span class="w-2 h-2 bg-[#2e6470] rounded-full"></span>
+                          Brown spots & dull skin
+                        </li>
+                        <li class="flex items-center gap-3">
+                          <span class="w-2 h-2 bg-[#2e6470] rounded-full"></span>
+                          Enlarged pores or acne
+                        </li>
+                        <li class="flex items-center gap-3">
+                          <span class="w-2 h-2 bg-[#2e6470] rounded-full"></span>
+                          Fine lines & wrinkles
+                        </li>
+                        <li class="flex items-center gap-3">
+                          <span class="w-2 h-2 bg-[#2e6470] rounded-full"></span>
+                          Uneven skin tone & texture
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- CTA 按钮区域 -->
+                  <div class="text-center">
+                    <p class="text-[#2e6470] font-bold text-xl mb-6">
+                      Transform your skin today for just <span class="text-3xl">$120</span>
+                    </p>
+                    <a
+                      href="booking.html"
+                      class="inline-flex items-center gap-3 bg-[#2e6470] hover:bg-[#1e4a54] px-10 py-5 rounded-full text-xl font-bold text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                    >
+                      <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2c-2 4-6 6-6 10a6 6 0 1 0 12 0c0-4-4-6-6-10z"/>
+                      </svg>
+                      Book Hydrating Facial
+                      <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                    </a>
+                    
+                    <!-- 附加信息 -->
+                    <div class="mt-6 flex flex-wrap justify-center gap-6 text-sm text-[#6a7b81]">
+                      <span class="flex items-center gap-2">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        60-minute session
+                      </span>
+                      <span class="flex items-center gap-2">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                        </svg>
+                        Same-day booking available
+                      </span>
+                      <span class="flex items-center gap-2">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                        </svg>
+                        All skin types welcome
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 右侧图片区域 -->
+                <div class="relative lg:w-1/2 w-full order-1 lg:order-2">
+                  <img
+                    src="figures/hydrating.jpg"
+                    alt="Hydrating Facial"
+                    class="w-full aspect-[1/2] object-cover"
+                  />
+                  <!-- 价格角标 -->
+                  <div class="absolute top-4 left-4 flex items-center gap-2 bg-[#2e6470] px-4 py-2 rounded-full shadow-lg text-white font-extrabold text-xl">
+                    <span class="text-2xl">💧</span>
+                    <span>$120</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 第二个Event: New Customer Welcome Offer -->
+              <div class="relative flex flex-col items-center rounded-xl bg-[#b2d8e511] shadow-md w-full">
+                <!-- 活动图片 -->
+                <img
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80"
+                  alt="Spa Welcome"
+                  class="rounded-t-xl w-full aspect-[2.3/1] object-cover"
+                />
+                <!-- 活动折扣角标 -->
+                <div class="absolute -top-4 left-4 flex items-center gap-2 bg-[#b2d8e5] px-4 py-1 rounded-full shadow text-[#121516] font-extrabold text-lg shadow-md">
+                  <!-- Sparkle Icon -->
+                  <svg width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#2e6470" d="M10 2.5c.28 0 .54.15.67.39l1.83 3.23a1 1 0 0 0 .55.44l3.54 1.09a.75.75 0 0 1 0 1.43l-3.54 1.1a1 1 0 0 0-.55.44L10.68 14.1a.75.75 0 0 1-1.36 0L7.5 10.62a1 1 0 0 0-.54-.44l-3.54-1.09a.75.75 0 0 1 0-1.43l3.54-1.1a1 1 0 0 0 .54-.44L9.32 2.89A.75.75 0 0 1 10 2.5Z"/></svg>
+                  20% OFF
+                </div>
+                <!-- 活动主信息 -->
+                <div class="flex flex-col gap-2 px-8 py-8 items-center w-full">
+                  <!-- 手心icon -->
+                  <div class="mb-2">
+                    <svg fill="none" viewBox="0 0 32 32" width="48" height="48" class="mx-auto">
+                      <circle cx="16" cy="16" r="16" fill="#b2d8e5"/>
+                      <path d="M10 15v5a4 4 0 1 0 8 0v-8h2.5A1.5 1.5 0 0 1 22 13.5v3" stroke="#2e6470" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M14 15v5a2 2 0 0 0 4 0v-6" stroke="#2e6470" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <h1 class="text-3xl font-extrabold text-[#162124] text-center">New Customer Welcome Offer</h1>
+                  <p class="text-[#486c74] text-base font-medium text-center">
+                    First time at Orenda Spa? <span class="text-[#2e6470] font-bold">Enjoy 20% OFF</span> your first service — any treatment, any time!
+                  </p>
+                  <ul class="flex flex-col items-center gap-1 text-base text-[#637f88] mt-2">
+                    <li class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-[#b2d8e5]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 6.293a1 1 0 0 0-1.414 0l-6.293 6.293-2.793-2.793A1 1 0 0 0 4.293 11.707l3.5 3.5a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z"/></svg>
+                      No code needed, just mention this offer at your first visit
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-[#b2d8e5]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 6.293a1 1 0 0 0-1.414 0l-6.293 6.293-2.793-2.793A1 1 0 0 0 4.293 11.707l3.5 3.5a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z"/></svg>
+                      Any facial, massage, or wellness treatment included
+                    </li>
+                    <li class="flex items-center gap-2">
+                      <svg class="w-4 h-4 text-[#b2d8e5]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 6.293a1 1 0 0 0-1.414 0l-6.293 6.293-2.793-2.793A1 1 0 0 0 4.293 11.707l3.5 3.5a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z"/></svg>
+                      One-time use, for new clients only
+                    </li>
+                  </ul>
+                  <a
+                    href="booking.html"
+                    class="flex mt-5 bg-[#b2d8e5] hover:bg-[#98cbe0] px-8 py-3 rounded-full text-lg font-bold text-[#121516] shadow-md transition shadow-[#8cd6ef22]"
+                  >
+                    Book Now &amp; Save 20%
+                  </a>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
     </div>
+    
     <!-- Footer -->
     <footer class="flex justify-center bg-[#f7fafd] border-t border-[#e1ebed] mt-8">
       <div class="flex max-w-[960px] flex-1 flex-col">
