@@ -1,0 +1,22 @@
+The smile_*.jpg photos are free stock photos from Unsplash (https://unsplash.com/license),
+used as decoration. The people shown are models, not Orenda Spa clients.
+
+smile_redhead_yellow.jpg  https://images.unsplash.com/photo-1713207249821-897050499670  (Look Studio)
+smile_redhead_cheer.jpg   https://images.unsplash.com/photo-1713646912042-b6c36d07ec1a  (Look Studio)
+smile_redhead_wink.jpg    https://images.unsplash.com/photo-1713778480816-ef754b227153  (Look Studio)
+smile_party_duo.jpg       https://images.unsplash.com/photo-1713519939508-29e8c2a1c03b
+smile_party_dance.jpg     https://images.unsplash.com/photo-1713519362648-1e1adec5dc8f
+smile_party_hug.jpg       https://images.unsplash.com/photo-1713528758139-6264be45bed4
+smile_laugh_orange.jpg    https://images.unsplash.com/photo-1764662028086-e74ce491080e
+smile_red_braids.jpg      https://images.unsplash.com/photo-1593187547925-f4c062fc300f  (Daniel Malinkovich)
+smile_pink_hair.jpg       https://images.unsplash.com/photo-1539182424174-993513d61272  (Ivan Stern)
+smile_blonde_laugh.jpg    https://images.unsplash.com/photo-1791670138049-044c0eb6901a
+smile_afro_swim.jpg       https://images.unsplash.com/photo-1672851628244-748cfa3cbbd7
+smile_blonde_retro.jpg    https://images.unsplash.com/photo-1713431372742-993f4c80bbc3
+smile_beach_blue.jpg      https://images.unsplash.com/photo-1630203751500-5e623a0fbeb9
+smile_beach_red.jpg       https://images.unsplash.com/photo-1593836788196-9fd68e904906
+smile_blonde_swim.jpg     https://images.unsplash.com/photo-1593215261340-ca189da98636
+smile_curls_rainbow.jpg   https://images.unsplash.com/photo-1697677103505-dd4b2dbf1b1d
+smile_blonde_color.jpg    https://images.unsplash.com/photo-1779398341931-a0ed7cbb2ea3
+
+The work_*.jpg photos are Orenda Spa's own photos from real appointments.

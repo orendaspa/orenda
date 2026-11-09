@@ -1,708 +1,318 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link rel="stylesheet" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?display=swap&family=Manrope:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900" />
-    <title>Orenda Spa</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-      // 弹窗控制
-      function openModal(id) {
-        document.getElementById(id).classList.remove('hidden');
-        document.body.classList.add('overflow-hidden');
-      }
-      function closeModal(id) {
-        document.getElementById(id).classList.add('hidden');
-        document.body.classList.remove('overflow-hidden');
-      }
-      document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll('.orenda-modal-bg').forEach(bg => {
-          bg.addEventListener('click', function(e) {
-            if (e.target === bg) {
-              bg.classList.add('hidden');
-              document.body.classList.remove('overflow-hidden');
-            }
-          });
-        });
-      });
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Orenda Spa | Waxing, facials, lashes and brows in Rockville, MD</title>
+    <meta name="description" content="Orenda Spa in Rockville, Maryland: waxing, facials, back treatment spa, lash lift and brow lamination. Call or text (227) 268-3171." />
+    <link rel="icon" type="image/png" href="figures/web/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" />
+    <link rel="stylesheet" href="css/site.css" />
   </head>
   <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Manrope, "Noto Sans", sans-serif;'>
-      <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f1f3f4] px-10 py-3">
-          <div class="flex items-center gap-4 text-[#121516]">
-            <div class="size-16">
-              <img src="figures/logo.jpg" alt="Orenda Spa Logo" class="w-full h-full object-contain" />
-            </div>
-            <h2 class="text-[#121516] text-lg font-bold leading-tight tracking-[-0.015em]">Orenda Spa</h2>
-          </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
-              <a class="text-[#121516] text-sm font-medium leading-normal" href="index.html">Home</a>  
-              <a class="text-[#121516] text-sm font-medium leading-normal" href="services.html">Services</a>
-              <a class="text-[#121516] text-sm font-medium leading-normal" href="events.html">Events</a>
-              <a class="text-[#121516] text-sm font-medium leading-normal" href="about.html">About</a>
-              <a class="text-[#121516] text-sm font-medium leading-normal" href="contact.html">Contact</a>
-            </div>
-            <a
-              href="booking.html"
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#b2d8e5] text-[#121516] text-sm font-bold leading-normal tracking-[0.015em]"
-            >
-              <span class="truncate">Book Now</span>
-            </a>
-          </div>
-        </header>
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="@container">
-              <div class="@[480px]:p-4">
-                <div
-                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
-                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("figures/main_page.jpg");'
-                >
-                  <div class="flex flex-col gap-2 text-center">
-                    <h1
-                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
-                    >
-                      Welcome to Orenda Spa
-                    </h1>
-                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
-                      Discover a sanctuary of tranquility and rejuvenation. Our expert therapists are dedicated to providing personalized experiences that enhance your well-being.
-                    </h2>
-                  </div>
-                  <a
-                    href="booking.html"
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#b2d8e5] text-[#121516] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
-                  >
-                    <span class="truncate">Book Your Escape</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Our Services Section -->
-            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Our Services</h2>
-            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-              <div class="flex items-stretch p-4 gap-3">
-                <!-- Facial Treatments -->
-                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
-                    style='background-image: url("figures/facial.jpeg");'
-                  ></div>
-                  <div>
-                    <p class="text-[#121516] text-base font-medium leading-normal">Facial Treatments</p>
-                    <p class="text-[#6a7b81] text-sm font-normal leading-normal">
-                      Experience our luxurious facial treatments tailored to your unique skin needs. Our professional estheticians use high-quality products to cleanse, rejuvenate, and nourish your skin for a radiant, healthy glow.
-                    </p>
-                  </div>
-                </div>
-                <!-- Back & Foot Treatments -->
-                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex flex-col"
-                    style='background-image: url("figures/back.jpg");'
-                  ></div>
-                  <div>
-                    <p class="text-[#121516] text-base font-medium leading-normal">Back &amp; Foot Treatments</p>
-                    <p class="text-[#6a7b81] text-sm font-normal leading-normal">
-                      Relieve tension and restore comfort with our specialized back and foot treatments. Perfect for soothing sore muscles and improving circulation, these therapies offer deep relaxation and lasting relief.
-                    </p>
-                  </div>
-                </div>
-          
-              </div>
-            </div>
-            <!-- End of Our Services Section -->
+    <a class="skip" href="#main">Skip to content</a>
 
-            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Events</h2>
-            <div class="p-4">
-              <!-- 第三个 Event：Image Only -->
-              <div class="relative flex flex-col lg:flex-row items-center rounded-2xl bg-gradient-to-br from-[#f5f5f5] to-[#fafafa] shadow-lg w-full overflow-hidden mb-8">
-                
-                <!-- 图片区域 -->
-                <div class="relative w-full">
-                  <img
-                    src="figures/blackfriday.jpg"
-                    alt="New Event Image"
-                    class="w-full aspect-[3/4] object-cover"
-                  />
-                </div>
-
-              </div>
-
-
-                           <!-- 第二个Event: Hydrating Facial -->
-              <div class="relative flex flex-col lg:flex-row items-center rounded-2xl bg-gradient-to-br from-[#e8f4f8] to-[#f0f9fc] shadow-lg w-full overflow-hidden mb-8">
-                <!-- 左侧内容区域 -->
-                <div class="lg:w-1/2 w-full p-8 lg:p-10 order-2 lg:order-1">
-                  <!-- 标题区域 - 跨越整个宽度 -->
-                  <div class="text-center mb-8">
-                    <h1 class="text-3xl lg:text-4xl font-black text-[#162124] mb-4 leading-tight">
-                      Hydrogen Oxygen <span class="text-[#2e6470]">Hydrating Facial</span>
-                    </h1>
-                    <p class="text-[#486c74] text-xl font-medium">
-                      Experience the ultimate in skin rejuvenation with our advanced hydrating facial treatment
-                    </p>
-                  </div>
-
-                  <!-- 双栏布局：Benefits & Ideal for -->
-                  <div class="grid md:grid-cols-2 gap-6 mb-8">
-                    <div class="bg-white/50 backdrop-blur-sm p-6 rounded-xl border border-white/30">
-                      <h4 class="flex items-center text-[#2e6470] font-bold text-lg mb-4">
-                        <span class="mr-2">✨</span>Benefits
-                      </h4>
-                      <ul class="text-[#6a7b81] text-base space-y-3">
-                        <li class="flex items-center gap-3">
-                          <span class="w-2 h-2 bg-[#b2d8e5] rounded-full"></span>
-                          Smaller pores & improved texture
-                        </li>
-                        <li class="flex items-center gap-3">
-                          <span class="w-2 h-2 bg-[#b2d8e5] rounded-full"></span>
-                          Youthful glow & deep hydration
-                        </li>
-                        <li class="flex items-center gap-3">
-                          <span class="w-2 h-2 bg-[#b2d8e5] rounded-full"></span>
-                          Reduce fine lines & wrinkles
-                        </li>
-                        <li class="flex items-center gap-3">
-                          <span class="w-2 h-2 bg-[#b2d8e5] rounded-full"></span>
-                          Stimulate collagen production
-                        </li>
-                      </ul>
-                    </div>
-                    
-                    <div class="bg-white/50 backdrop-blur-sm p-6 rounded-xl border border-white/30">
-                      <h4 class="flex items-center text-[#2e6470] font-bold text-lg mb-4">
-                        <span class="mr-2">🎯</span>Ideal For
-                      </h4>
-                      <ul class="text-[#6a7b81] text-base space-y-3">
-                        <li class="flex items-center gap-3">
-                          <span class="w-2 h-2 bg-[#2e6470] rounded-full"></span>
-                          Brown spots & dull skin
-                        </li>
-                        <li class="flex items-center gap-3">
-                          <span class="w-2 h-2 bg-[#2e6470] rounded-full"></span>
-                          Enlarged pores or acne
-                        </li>
-                        <li class="flex items-center gap-3">
-                          <span class="w-2 h-2 bg-[#2e6470] rounded-full"></span>
-                          Fine lines & wrinkles
-                        </li>
-                        <li class="flex items-center gap-3">
-                          <span class="w-2 h-2 bg-[#2e6470] rounded-full"></span>
-                          Uneven skin tone & texture
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <!-- CTA 按钮区域 -->
-                  <div class="text-center">
-                    <p class="text-[#2e6470] font-bold text-xl mb-6">
-                      Transform your skin today for just <span class="text-3xl">$180</span>
-                    </p>
-                    <a
-                      href="booking.html"
-                      class="inline-flex items-center gap-3 bg-gradient-to-r from-[#2e6470] to-[#1e4a54] hover:from-[#1e4a54] hover:to-[#2e6470] px-10 py-5 rounded-full text-xl font-bold text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                    >
-                      <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10 2c-2 4-6 6-6 10a6 6 0 1 0 12 0c0-4-4-6-6-10z"/>
-                      </svg>
-                      Book Hydrating Facial
-                      <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                      </svg>
-                    </a>
-                    
-                    <!-- 附加信息 -->
-                    <div class="mt-6 flex flex-wrap justify-center gap-6 text-sm text-[#6a7b81]">
-                      <span class="flex items-center gap-2">
-                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                        </svg>
-                        60-minute session
-                      </span>
-                      <span class="flex items-center gap-2">
-                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                          <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
-                        </svg>
-                        Same-day booking available
-                      </span>
-                      <span class="flex items-center gap-2">
-                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                          <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
-                        </svg>
-                        All skin types welcome
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- 右侧图片区域 -->
-                <div class="relative lg:w-1/2 w-full order-1 lg:order-2">
-                  <img
-                    src="figures/hydrating.jpg"
-                    alt="Hydrating Facial"
-                    class="w-full aspect-[1/2] object-cover"
-                  />
-                  <!-- 价格角标 -->
-                  <!-- <div class="absolute top-4 left-4 flex items-center gap-2 bg-gradient-to-r from-[#2e6470] to-[#1e4a54] px-4 py-2 rounded-full shadow-lg text-white font-extrabold text-xl">
-                    <span class="text-2xl">💧</span>
-                    <span>$120</span>
-                  </div> -->
-                  <!-- 装饰性渐变覆盖 -->
-                  <!-- <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent lg:bg-gradient-to-l lg:from-transparent lg:to-[#e8f4f8]/80"></div> -->
-                </div>
-              </div>
-
-
-              <!-- 第一个Event: New Customer Welcome Offer -->
-              <div class="relative flex flex-col items-center rounded-xl bg-[#b2d8e511] shadow-md w-full mb-8">
-                <!-- 活动图片 -->
-                <img
-                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80"
-                  alt="Spa Welcome"
-                  class="rounded-t-xl w-full aspect-[2.3/1] object-cover"
-                />
-                <!-- 活动折扣角标 -->
-                <div class="absolute -top-4 left-4 flex items-center gap-2 bg-[#b2d8e5] px-4 py-1 rounded-full shadow text-[#121516] font-extrabold text-lg shadow-md">
-                  <!-- Sparkle Icon -->
-                  <svg width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#2e6470" d="M10 2.5c.28 0 .54.15.67.39l1.83 3.23a1 1 0 0 0 .55.44l3.54 1.09a.75.75 0 0 1 0 1.43l-3.54 1.1a1 1 0 0 0-.55.44L10.68 14.1a.75.75 0 0 1-1.36 0L7.5 10.62a1 1 0 0 0-.54-.44l-3.54-1.09a.75.75 0 0 1 0-1.43l3.54-1.1a1 1 0 0 0 .54-.44L9.32 2.89A.75.75 0 0 1 10 2.5Z"/></svg>
-                  20% OFF
-                </div>
-                <!-- 活动主信息 -->
-                <div class="flex flex-col gap-2 px-8 py-8 items-center w-full">
-                  <!-- 手心icon -->
-                  <div class="mb-2">
-                    <svg fill="none" viewBox="0 0 32 32" width="48" height="48" class="mx-auto">
-                      <circle cx="16" cy="16" r="16" fill="#b2d8e5"/>
-                      <path d="M10 15v5a4 4 0 1 0 8 0v-8h2.5A1.5 1.5 0 0 1 22 13.5v3" stroke="#2e6470" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M14 15v5a2 2 0 0 0 4 0v-6" stroke="#2e6470" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </div>
-                  <h1 class="text-3xl font-extrabold text-[#162124] text-center">New Customer Welcome Offer</h1>
-                  <p class="text-[#486c74] text-base font-medium text-center">
-                    First time at Orenda Spa? <span class="text-[#2e6470] font-bold">Enjoy 20% OFF</span> your first service — any treatment, any time!
-                  </p>
-                  <ul class="flex flex-col items-center gap-1 text-base text-[#637f88] mt-2">
-                    <li class="flex items-center gap-2">
-                      <svg class="w-4 h-4 text-[#b2d8e5]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 6.293a1 1 0 0 0-1.414 0l-6.293 6.293-2.793-2.793A1 1 0 0 0 4.293 11.707l3.5 3.5a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z"/></svg>
-                      No code needed, just mention this offer at your first visit
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <svg class="w-4 h-4 text-[#b2d8e5]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 6.293a1 1 0 0 0-1.414 0l-6.293 6.293-2.793-2.793A1 1 0 0 0 4.293 11.707l3.5 3.5a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z"/></svg>
-                      Any facial, massage, or wellness treatment included
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <svg class="w-4 h-4 text-[#b2d8e5]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 6.293a1 1 0 0 0-1.414 0l-6.293 6.293-2.793-2.793A1 1 0 0 0 4.293 11.707l3.5 3.5a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z"/></svg>
-                      One-time use, for new clients only
-                    </li>
-                  </ul>
-                  <a
-                    href="booking.html"
-                    class="flex mt-5 bg-[#b2d8e5] hover:bg-[#98cbe0] px-8 py-3 rounded-full text-lg font-bold text-[#121516] shadow-md transition shadow-[#8cd6ef22]"
-                  >
-                    Book Now &amp; Save 20%
-                  </a>
-                </div>
-              </div>
-
- 
-            </div>
-            <!-- End of Events Section -->
-            
-            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">News</h2>
-            <div class="p-4">
-              <!-- NEW: Seasonal Skincare Special -->
-              <h3 class="text-[#121516] text-xl font-bold leading-tight mb-4">❄️ Introducing "The Autumn/Winter Glow" Facial</h3>
-              <div class="flex items-stretch justify-between gap-4 rounded-xl mb-6">
-                <!-- Text Content -->
-                <div class="flex flex-[2_2_0px] flex-col gap-4">
-                  <div class="flex flex-col gap-1">
-                    <p class="text-[#121516] text-base font-bold leading-tight">
-                      A 40-Minute, $50 Ritual to Rescue Your Skin from the Cold
-                    </p>
-                    <p class="text-[#6a7b81] text-sm font-normal leading-normal">
-                      As autumn transitions to winter, Orenda Spa launches a seasonal specialty designed to combat harsh weather effects. This transformative 40-minute treatment focuses on intense rehydration, barrier repair, and gentle exfoliation to restore your skin's natural glow.
-                    </p>
-                    
-                    <p class="text-[#6a7b81] text-sm font-normal leading-normal mt-2">
-                      "The drop in humidity and extreme temperature shifts can compromise our skin's protective barrier," says Banyan. "The Autumn/Winter Glow makes essential seasonal skincare accessible to everyone."
-                    </p>
-
-                    <div class="mt-3">
-                      <p class="text-[#121516] text-sm font-semibold">Treatment Highlights:</p>
-                      <ul class="text-[#6a7b81] text-sm list-disc list-inside">
-                        <li>Intense rehydration with Hyaluronic Acid & Ceramides</li>
-                        <li>Strengthens skin's natural lipid barrier</li>
-                        <li>Gentle exfoliation for brighter complexion</li>
-                      </ul>
-                    </div>
-
-                    <p class="text-[#121516] text-sm font-bold mt-3">
-                      Limited Time Offer: Available from October 29th to January 31st
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Side Image -->
-              </div>
-            </div>
-
-
-
-
-
-
-
-
-
-            <div class="p-4">
-              <!-- NEW: Traditional Spa Meets Yoga -->
-              <h3 class="text-[#121516] text-xl font-bold leading-tight mb-4">🧘 Traditional Spa Meets Yoga Philosophy</h3>
-              <div class="flex items-stretch justify-between gap-4 rounded-xl mb-6">
-                <div class="flex flex-[2_2_0px] flex-col gap-4">
-                  <div class="flex flex-col gap-1">
-                    <p class="text-[#121516] text-base font-bold leading-tight">
-                      The Intersection of Natural Wisdom and Inner Peace
-                    </p>
-                    <p class="text-[#6a7b81] text-sm font-normal leading-normal">
-                      Orenda Spa introduces a new holistic wellness journey where traditional spa practices blend seamlessly with yoga philosophy. Guests can embark on a mindfulness-inspired aromatherapy experience, designed to promote inner peace and balance the body and mind.
-                    </p>
-
-                    <!-- Add Image with Caption -->
-                    <div class="flex items-center gap-4 mt-4">
-                      <!-- Image 1 -->
-                      <div 
-                        class="flex-1 aspect-[4/3] bg-center bg-no-repeat bg-cover rounded-xl"
-                        style="background-image: url('figures/yoga1.jpeg');">
-                      </div>
-                      <!-- Image 2 -->
-                      <div 
-                        class="flex-1 aspect-[4/3] bg-center bg-no-repeat bg-cover rounded-xl"
-                        style="background-image: url('figures/yoga3.jpeg');">
-                      </div>
-                      <!-- Image 3 -->
-                      <div 
-                        class="flex-1 aspect-[4/3] bg-center bg-no-repeat bg-cover rounded-xl"
-                        style="background-image: url('figures/yoga2.jpeg');">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- OTHER NEWS -->
-              <h3 class="text-[#121516] text-xl font-bold leading-tight mb-4">🕯️ Ear Candling</h3>
-              <div class="flex items-stretch justify-between gap-4 rounded-xl mb-6">
-                <div class="flex flex-[2_2_0px] flex-col gap-4">
-                  <div class="flex flex-col gap-1">
-                    <p class="text-[#121516] text-lg font-bold leading-tight">What is ear candling?</p>
-                    <p class="text-[#6a7b81] text-base font-normal leading-normal mb-4">
-                      Ear candling is a relaxing technique using a hollow wax paper tube. One end is placed in the ear, and the other end is lit. The gentle process helps draw out earwax and can alleviate symptoms like ringing in the ears and sinus pressure.
-                    </p>
-
-                    <div class="mb-4">
-                      <p class="text-[#121516] text-lg font-semibold mb-3">Key benefits:</p>
-                      <div class="grid grid-cols-2 gap-2 text-[#6a7b81] text-base">
-                        <div>• Eliminate excess earwax</div>
-                        <div>• Aid with sinus issues</div>
-                        <div>• Improve hearing</div>
-                        <div>• Improve overall wellbeing</div>
-                        <div>• Reduce headaches</div>
-                        <div>• Deep relaxation</div>
-                      </div>
-                    </div>
-
-                    <div class="mb-4 bg-[#f8fafb] p-4 rounded-lg">
-                      <p class="text-[#121516] text-base font-semibold mb-2">✨ What to expect:</p>
-                      <p class="text-[#6a7b81] text-sm leading-relaxed">
-                        Your 20-minute session includes consultation, the gentle ear candling process, and relaxation time. Most clients find it deeply calming and therapeutic.
-                      </p>
-                    </div>
-
-                    <p class="text-[#2e6470] font-bold text-base">Book your $12 session of serenity today!</p>
-                    <p class="text-[#6a7b81] text-sm italic">*Available as an add-on service with any treatment</p>
-                  </div>
-                </div>
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-xl flex-1"
-                  style='background-image: url("figures/ear_candling.jpg");'
-                ></div>
-              </div>
-
-              <!-- NEW: Cooperation with Aveda -->
-              <h3 class="text-[#121516] text-xl font-bold leading-tight mb-4">🌿 Cooperation with Aveda</h3>
-              <div class="flex items-stretch justify-between gap-4 rounded-xl">
-                <div class="flex flex-[2_2_0px] flex-col gap-4">
-                  <div class="flex flex-col gap-1">
-                    <p class="text-[#121516] text-base font-bold leading-tight">Orenda Spa Unveils a Symphony of Sustainable Luxury with Aveda's Vegan Elixirs</p>
-                    <p class="text-[#6a7b81] text-sm font-normal leading-normal">Rockville, Aug 5, 2025— Orenda Spa, an oasis of transcendent wellness in Rockville, is honored to announce its exclusive collaboration with Aveda, the vanguard of luxe, plant-powered beauty.</p>
-                    <p class="text-[#6a7b81] text-sm font-normal leading-normal">Beginning Aug 2025, discerning guests will indulge in bespoke rituals crafted from Aveda's biotech-infused skincare and body collections-where scientific brilliance meets botanical artistry, all cradled in vegan purity and environmental reverence.</p>
-                  </div>
-                  <a
-                    href="services.html" 
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 flex-row-reverse bg-[#f1f3f4] text-[#121516] text-sm font-medium leading-normal w-fit"
-                  >
-                    <span class="truncate">Discover Now</span>
-                  </a>
-                </div>
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl flex-1"
-                  style='background-image: url("figures/news1.jpg");'
-                ></div>
-              </div>
-            </div>
-            <!-- moved Customer Reviews here -->
-            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Customer Reviews</h2>
-            <div class="flex flex-col gap-8 overflow-x-hidden bg-white p-4">
-              <div class="flex flex-col gap-3 bg-white">
-                <div class="flex items-center gap-3">
-                  <div
-                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvbzEUcT6MEISu1DjzXn6I5R5ILfhIDYcyyFJPdoZkr8gO1wzV1rtZtN9-7finy4DcSv7iMX1CDJlOtN-UrX2vOHlW_pTaAu91yYUuDlYd4RaZMp4qnPH_Uva3iZJUYAUk6j41qw22l6vayTKBuxf93idBanGQEbqs1jKpIIp4hKdRrzqArrDk3M2NRxX4ylam4k55zgtLl89y1K28Ed3YIsb5nK7eQn010CXUMaJvwHRpYNAsKa9BCRl7X6dsnnIwKyRKaZSiXnDX");'
-                  ></div>
-                  <div class="flex-1">
-                    <p class="text-[#121516] text-base font-medium leading-normal">Olivia Harper</p>
-                    <p class="text-[#6a7b81] text-sm font-normal leading-normal">August 8, 2025</p>
-                  </div>
-                </div>
-                <div class="flex gap-0.5">
-                  <!-- stars SVG -->
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" class="text-yellow-400">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                  </svg>
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" class="text-yellow-400">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                  </svg>
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" class="text-yellow-400">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                  </svg>
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" class="text-yellow-400">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                  </svg>
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" class="text-yellow-400">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                  </svg>
-                </div>
-                <p class="text-[#121516] text-base font-normal leading-normal">
-                  "Orenda Spa is a true oasis. The staff is incredibly professional, and the treatments are top-notch. I left feeling completely refreshed and rejuvenated."
-                </p>
-              </div>
-              <div class="flex flex-col gap-3 bg-white">
-                <div class="flex items-center gap-3">
-                  <div
-                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD36PMDfFsKBxsjYy4r1SkJZqKsf11LJhMUhadOSWEStAyH13dR64iCCRYLIu2oZg7UtWxM0J0dOtm2KUpziOjqgAyhhdzYtciMJQhR5qHYICimkMlOSpwyM4-FGzGklJD7sJV-d4nu-E4guI1zs6rQtR_qOjaaRhNV6nOVwO76Njxat9aq9s1_1QCnaGCXm6o5daFWCA-mw8AmHdtXOCxuZzEJJdmG11YnF0oK-moqFrsZh7fRZ09mP8_1gnkClJR7XpmjXoy-46Dm");'
-                  ></div>
-                  <div class="flex-1">
-                    <p class="text-[#121516] text-base font-medium leading-normal">Liam Bennett</p>
-                    <p class="text-[#6a7b81] text-sm font-normal leading-normal">August 7, 2025</p>
-                  </div>
-                </div>
-                <div class="flex gap-0.5">
-                  <!-- stars SVG -->
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" class="text-yellow-400">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                  </svg>
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" class="text-yellow-400">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                  </svg>
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" class="text-yellow-400">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                  </svg>
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" class="text-yellow-400">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                  </svg>
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" class="text-yellow-400">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                  </svg>
-                </div>
-                <p class="text-[#121516] text-base font-normal leading-normal">
-                  "I had an amazing experience at Orenda Spa. The atmosphere is so calming, and the massage was perfect. I highly recommend it!"
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <footer class="flex justify-center">
-          <div class="flex max-w-[960px] flex-1 flex-col">
-            <div class="flex flex-col gap-6 px-5 py-10 text-center @container">
-              <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
-                <a href="javascript:void(0);" onclick="openModal('privacy-modal')" class="text-[#6a7b81] text-base font-normal leading-normal min-w-40 cursor-pointer">Privacy Policy</a>
-                <a href="javascript:void(0);" onclick="openModal('terms-modal')" class="text-[#6a7b81] text-base font-normal leading-normal min-w-40 cursor-pointer">Terms of Service</a>
-                <a class="text-[#6a7b81] text-base font-normal leading-normal min-w-40" href="contact.html">Contact Us</a>
-              </div>
-              <div class="flex flex-wrap justify-center gap-4">
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/orendaspa2025?igsh=anl5M3kyMHd5bG84&utm_source=qr" target="_blank" rel="noopener noreferrer">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                      viewBox="0 0 256 256" class="w-6 h-6 text-[#6a7b81] hover:text-[#b2d8e5] transition">
-                    <path
-                      d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/>
-                  </svg>
-                </a>
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/share/p/1EYyjutKAo/" target="_blank" rel="noopener noreferrer">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                      viewBox="0 0 256 256" class="w-6 h-6 text-[#6a7b81] hover:text-[#b2d8e5] transition">
-                    <path
-                      d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"/>
-                  </svg>
-                </a>
-                <!-- TikTok -->
-                <a href="https://www.tiktok.com/@orendaspa2025?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">
-                  <!-- SimpleIcons Tiktok SVG -->
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24" class="w-6 h-6 text-[#6a7b81] hover:text-[#b2d8e5] transition">
-                    <path d="M12.389 2.031h3.157a4.185 4.185 0 0 0 4.183 4.174v3.159a7.409 7.409 0 0 1-3.316-.427v7.803c0 3.893-3.158 7.058-7.046 7.058a7.062 7.062 0 1 1 0-14.125c.086 0 .172.004.257.006v3.16a3.899 3.899 0 1 0 3.899 3.899V2.031z"/>
-                  </svg>
-                </a>
-              </div>
-              <p class="text-[#6a7b81] text-base font-normal leading-normal">© 2025 Orenda Spa. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
-        <!-- Privacy Policy 弹窗 -->
-        <div id="privacy-modal" class="fixed orenda-modal-bg hidden z-50 inset-0 flex items-center justify-center bg-black/40">
-          <div class="bg-white rounded-2xl shadow-xl max-w-lg w-[95vw] p-8 relative border border-[#ebf3f6] flex flex-col items-center text-[#111618]">
-            <h2 class="text-xl font-extrabold mb-3">Privacy Policy</h2>
-            <div class="text-left text-[#617f89] text-base mb-6 max-h-[50vh] overflow-y-auto space-y-5">
-
-              <p>At Orenda Spa, your privacy is very important to us. Any personal information you provide as part of booking an appointment will only be used for service provision and communication related to your booking. We do not share your details with third parties except as required by law. All online data is transmitted securely. By booking you agree to our use of your data as outlined here. You may request to view, edit, or permanently delete your data at any time by contacting us.</p>
-              
-              <div>
-                <h3 class="font-bold text-[#162124] mb-1">1. What Information We Collect</h3>
-                <ul class="list-disc list-inside space-y-1">
-                  <li><strong>Personal Details:</strong> Name, contact info, birthdate (for age verification), and payment details.</li>
-                  <li><strong>Health/Preferences:</strong> Skin concerns, allergies, or service notes (so we can keep you safe and pampered).</li>
-                  <li><strong>Automated Data:</strong> Website usage via cookies (like how long you stared at our CBD massage page).</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 class="font-bold text-[#162124] mb-1">2. How We Use Your Info</h3>
-                <ul class="list-disc list-inside space-y-1">
-                  <li><strong>To Spa Like a Boss:</strong> Book appointments, customize treatments, and send confirmations.</li>
-                  <li><strong>For Legal &amp; Safety Reasons:</strong> Comply with Maryland licensing laws or process insurance claims.</li>
-                  <li><strong>Marketing (Only with Consent!):</strong> Occasional emails about new services or promos (opt-out anytime).</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 class="font-bold text-[#162124] mb-1">3. Who We Share With</h3>
-                <ul class="list-disc list-inside space-y-1">
-                  <li><strong>Never Sold:</strong> We don't trade your data for mani-pedis or crypto.</li>
-                  <li><strong>Trusted Partners:</strong> Payment processors or software providers (they're legally bound to protect you).</li>
-                  <li><strong>If Required by Law:</strong> Like a court order (we'll object unless totally necessary).</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 class="font-bold text-[#162124] mb-1">4. Your Rights</h3>
-                <ul class="list-disc list-inside space-y-1">
-                  <li><strong>Access/Update:</strong> Email <a href="mailto:orendaspa2025@gmail.com" class="underline text-[#13b5eb]">orendaspa2025@gmail.com</a> to correct your preferences (e.g., "Stop calling me 'Dry Skin Sally'").</li>
-                  <li><strong>Delete Data:</strong> Request removal unless legally required to keep it.</li>
-                  <li><strong>Opt-Out:</strong> Unsubscribe from emails via the link in every message.</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 class="font-bold text-[#162124] mb-1">5. Security Measures</h3>
-                <ul class="list-disc list-inside space-y-1">
-                  <li>We use encryption (fancy tech armor) and limit staff access to your data.</li>
-                  <li>No Wi-Fi is 100% hacker-proof—so we don't store sensitive info like full credit card numbers.</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 class="font-bold text-[#162124] mb-1">6. Policy Updates</h3>
-                <ul class="list-disc list-inside space-y-1">
-                  <li>Changes will be posted here (we'll pinky-swear not to sneak anything shady).</li>
-                </ul>
-              </div>
-
-            </div>
-            <button onclick="closeModal('privacy-modal')" class="mt-2 px-5 py-2 rounded-full bg-[#13b5eb] text-white font-semibold shadow hover:bg-[#b2d8e5] transition">
-              Acknowledge
-            </button>
-            <button onclick="closeModal('privacy-modal')" class="absolute top-3 right-4 text-[#b2d8e5] hover:text-[#13b5eb] text-xl font-bold bg-transparent border-0">×</button>
-          </div>
-        </div>
-        <!-- END Privacy Policy 弹窗 -->
-        <!-- Terms of Service 弹窗 -->
-        <div id="terms-modal" class="fixed orenda-modal-bg hidden z-50 inset-0 flex items-center justify-center bg-black/40">
-          <div class="bg-white rounded-2xl shadow-xl max-w-lg w-[95vw] p-8 relative border border-[#ebf3f6] flex flex-col items-center text-[#111618]">
-            <h2 class="text-xl font-extrabold mb-3">Terms of Service</h2>
-            <div class="text-left text-[#617f89] text-base mb-6 max-h-[50vh] overflow-y-auto space-y-5">
-
-              <p class="mb-3">
-                By booking with Orenda Spa, you agree to our policies regarding appointments, cancellations, and payments. Please arrive on time for your session. Late arrivals may result in shortened treatment time.
-                Cancellations should be made at least 24 hours in advance. Failure to do so may result in a cancellation fee.
-                Our staff is committed to providing you with a safe, clean, and relaxing environment. Please notify us of any health conditions or concerns before your treatment.
-              </p>
-
-              <div>
-                <h3 class="font-bold text-[#162124] mb-1">1. Spa Etiquette (AKA Don't Be That Person)</h3>
-                <ul class="list-disc list-inside space-y-1">
-                  <li><strong>Late Arrivals:</strong> Arriving more than 15 minutes late means your service may be shortened (we love you, but our next client does too).</li>
-                  <li><strong>Cancellations:</strong> Please give at least 24 hours' notice or a 50% fee applies (emergencies? Just talk to us—we're human).</li>
-                  <li><strong>No-Shows:</strong> Will be charged the full price (we'll cry while depositing your payment).</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 class="font-bold text-[#162124] mb-1">2. Health &amp; Safety</h3>
-                <ul class="list-disc list-inside space-y-1">
-                  <li><strong>Patch Tests:</strong> Required for certain treatments (unless you <em>want</em> to audition for a lobster role).</li>
-                  <li><strong>Medical Conditions:</strong> Please disclose allergies, pregnancy, or anything else we should know—we're estheticians, not psychics.</li>
-                  <li><strong>Illness:</strong> If you have a fever or cold, please reschedule (we'll reward you with extra hand-holding next time).</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 class="font-bold text-[#162124] mb-1">3. Payments &amp; Refunds</h3>
-                <ul class="list-disc list-inside space-y-1">
-                  <li><strong>Cards on File:</strong> Required for all bookings (no, we don't accept IOUs or TikTok fame).</li>
-                  <li><strong>Gift Cards:</strong> No refunds, but they never expire (unlike your ex's apologies).</li>
-                  <li><strong>Service Issues:</strong> Tell us within 48 hours for a fix—silent suffering isn't a loyalty program.</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 class="font-bold text-[#162124] mb-1">4. Liability</h3>
-                <ul class="list-disc list-inside space-y-1">
-                  <li><strong>Skin Reactions:</strong> Rare, but possible—we'll do everything to prevent them (but you can't sue us over that one blackhead).</li>
-                  <li><strong>Lost Items:</strong> We can't be responsible for left-behind earrings or emotional baggage.</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 class="font-bold text-[#162124] mb-1">5. Intellectual Property</h3>
-                <ul class="list-disc list-inside space-y-1">
-                  <li>Our spa name, logo, and secret serum blends are &copy; Orenda Spa (but feel free to tag us in your selfies!).</li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 class="font-bold text-[#162124] mb-1">6. Changes to Terms</h3>
-                <ul class="list-disc list-inside space-y-1">
-                  <li>Any updates will be posted here. By continuing to book, you're pinky-swearing you agree.</li>
-                </ul>
-              </div>
-            </div>
-            <button onclick="closeModal('terms-modal')" class="mt-2 px-5 py-2 rounded-full bg-[#13b5eb] text-white font-semibold shadow hover:bg-[#b2d8e5] transition">
-              Acknowledge
-            </button>
-            <button onclick="closeModal('terms-modal')" class="absolute top-3 right-4 text-[#b2d8e5] hover:text-[#13b5eb] text-xl font-bold bg-transparent border-0">×</button>
-          </div>
-        </div>
-        <!-- END Terms of Service 弹窗 -->
-        <!-- END 弹窗 -->
-      </div>
+    <!-- Announcement bar: edit or delete this block to change the message at the very top -->
+    <div class="topbar">
+      New: door-to-door service for female clients.<a href="contact.html">Check your area</a>
     </div>
+
+    <!-- Header (same on every page) -->
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="index.html"><img src="figures/web/logo.png" alt="Orenda Spa — the power of nature" width="400" height="245" /></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" id="site-nav" aria-label="Main">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="services.html">Services</a>
+          <a href="events.html">Events</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a class="btn btn-small" href="booking.html">Book now</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero: headline on the left, one large photo on the right -->
+      <section class="hero">
+        <div class="hero-copy">
+          <h1><span>Smooth skin.</span> <span><em>Bright eyes.</em></span> <span>Big smiles.</span></h1>
+          <p class="lede">Welcome to Orenda Spa, a sanctuary of tranquility and rejuvenation. Our expert therapists are dedicated to providing personalized experiences that enhance your well-being.</p>
+          <div class="btn-row">
+            <a class="btn" href="booking.html">Book your escape</a>
+            <a class="btn btn-outline" href="services.html">See the menu</a>
+          </div>
+        </div>
+        <div class="hero-photo"><img src="figures/web/smile_hero.jpg" alt="A woman with curly red hair smiling in delight, hands on her cheeks" width="1400" height="933" style="object-position: 50% 30%" /></div>
+      </section>
+
+      <div class="facts">
+        <div class="wrap">
+          <p><strong>Rockville, Maryland</strong>966 Hungerford Dr, 28A Room 3</p>
+          <p><strong>Open Sunday to Friday</strong>9:30 AM – 8:30 PM</p>
+          <p><strong>Call or text</strong><a href="tel:+12272683171">(227) 268-3171</a></p>
+        </div>
+      </div>
+
+      <!-- Moving strip of treatments -->
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track"><ul><li>Brazilian wax</li><li>Bikini wax</li><li>Brow wax</li><li>Acne treatment facial</li><li>Hydrating facial</li><li>Anti-aging facial</li><li>Back treatment spa</li><li>Lash lift and tint</li><li>Brow laminate and tint</li></ul><ul><li>Brazilian wax</li><li>Bikini wax</li><li>Brow wax</li><li>Acne treatment facial</li><li>Hydrating facial</li><li>Anti-aging facial</li><li>Back treatment spa</li><li>Lash lift and tint</li><li>Brow laminate and tint</li></ul></div>
+      </div>
+
+      <!-- Services -->
+      <section class="band">
+        <div class="wrap">
+          <div class="section-head split">
+            <div>
+              <h2>Our services</h2>
+              <p class="lede" style="margin-top: 16px">Waxing, facials, back care, lashes and brows. Every treatment is listed with its price.</p>
+            </div>
+            <a class="text-link" href="services.html">Open the full menu</a>
+          </div>
+          <div class="menu-grid">
+            <article class="menu-card">
+              <div class="menu-top">
+                <img src="figures/web/wax.jpg" alt="" style="object-position: 40% 50%" loading="lazy" />
+                <h3>Waxing</h3>
+              </div>
+              <p>Smooth. Clean. Confident. Soft, smooth skin you can feel good about, with brow wax as an easy add-on.</p>
+              <ul class="price-list">
+                <li>
+                  <div class="price-row"><span class="name">Brazilian</span><span class="dots"></span><span class="price">$50</span></div>
+                </li>
+                <li>
+                  <div class="price-row"><span class="name">Bikini</span><span class="dots"></span><span class="price">$40</span></div>
+                </li>
+                <li>
+                  <div class="price-row"><span class="name">Brazilian + Brow Wax</span><span class="dots"></span><span class="price">$60</span></div>
+                </li>
+                <li>
+                  <div class="price-row"><span class="name">Bikini + Brow Wax</span><span class="dots"></span><span class="price">$50</span></div>
+                </li>
+              </ul>
+              <div class="btn-row">
+                <a class="btn" href="booking.html">Book now</a>
+              </div>
+            </article>
+            <article class="menu-card">
+              <div class="menu-top">
+                <img src="figures/web/facial.jpg" alt="" style="object-position: 72% 50%" loading="lazy" />
+                <h3>Facials</h3>
+              </div>
+              <p>A calm, focused facial, chosen for what your skin needs. The acne treatment is 60 minutes of cleansing, steaming, extracting, masque and repairing.</p>
+              <ul class="price-list">
+                <li>
+                  <div class="price-row"><span class="name">Acne Treatment Facial</span><span class="dots"></span><span class="price">$50</span></div>
+                </li>
+                <li>
+                  <div class="price-row"><span class="name">Hydrating Facial</span><span class="dots"></span><span class="price">$50</span></div>
+                </li>
+                <li>
+                  <div class="price-row"><span class="name">Anti-aging Facial</span><span class="dots"></span><span class="price">$50</span></div>
+                </li>
+              </ul>
+              <div class="btn-row">
+                <a class="btn" href="booking.html">Book now</a>
+              </div>
+            </article>
+            <article class="menu-card">
+              <div class="menu-top">
+                <img src="figures/web/back_treatment.jpg" alt="" style="object-position: 50% 50%" loading="lazy" />
+                <h3>Back treatment</h3>
+              </div>
+              <p>A calm, caring 50-minute treatment for your back: cleansing, exfoliating, massage and back skin care.</p>
+              <ul class="price-list">
+                <li>
+                  <div class="price-row"><span class="name">Back Treatment Spa</span><span class="dots"></span><span class="price">$50</span></div>
+                </li>
+              </ul>
+              <div class="btn-row">
+                <a class="btn" href="booking.html">Book now</a>
+              </div>
+            </article>
+            <article class="menu-card">
+              <div class="menu-top">
+                <img src="figures/web/lash.jpg" alt="" style="object-position: 50% 30%" loading="lazy" />
+                <h3>Lashes &amp; brows</h3>
+              </div>
+              <p>Lifted, darker-looking lashes for a bright, open-eyed look, and brows that stay in shape.</p>
+              <ul class="price-list">
+                <li>
+                  <div class="price-row"><span class="name">Lash Lift + Tint</span><span class="dots"></span><span class="price">$45</span></div>
+                </li>
+                <li>
+                  <div class="price-row"><span class="name">Brow Laminate + Tint</span><span class="dots"></span><span class="price">$45</span></div>
+                </li>
+              </ul>
+              <div class="btn-row">
+                <a class="btn" href="booking.html">Book now</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Real photos from the treatment room -->
+      <section class="band band-cream">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Inside the treatment room</h2>
+            <p class="lede">Real photos from real appointments at Orenda Spa.</p>
+          </div>
+          <div class="work-grid">
+            <figure><img src="figures/web/work_lamp.jpg" alt="An esthetician in a mask working on a client under a magnifying lamp" loading="lazy" /><figcaption>Detail work under the magnifying lamp</figcaption></figure>
+            <figure><img src="figures/web/work_lash.jpg" alt="A client with eye pads and lifting shields during a lash lift" loading="lazy" /><figcaption>Lash lift in progress</figcaption></figure>
+            <figure><img src="figures/web/work_extraction.jpg" alt="Gloved hands using an extraction tool on a client's cheek" loading="lazy" /><figcaption>Acne treatment: careful extraction</figcaption></figure>
+            <figure><img src="figures/web/work_scrubber.jpg" alt="A skin scrubber tool cleansing the pores on a client's nose" loading="lazy" /><figcaption>Deep pore cleansing</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Current specials (the flyers) -->
+      <section class="band band-ink">
+        <div class="wrap">
+          <div class="section-head split">
+            <div>
+              <h2>Special offers</h2>
+              <p class="lede" style="margin-top: 16px">Four favorites at a special price. Call or text to book your appointment.</p>
+            </div>
+            <a class="text-link" href="events.html">See the details</a>
+          </div>
+          <div class="flyer-row">
+            <a class="flyer" href="events.html#brazilian-wax"><img src="figures/web/flyer_wax.jpg" alt="Orenda Spa waxing service flyer: Brazilian wax special offer, only $50" width="1280" height="1656" loading="lazy" /></a>
+            <a class="flyer" href="events.html#back-treatment"><img src="figures/web/flyer_back.jpg" alt="Orenda Spa flyer: back treatment spa, only $50 for 50 minutes" width="1280" height="1656" loading="lazy" /></a>
+            <a class="flyer" href="events.html#lash-lift"><img src="figures/web/flyer_lash.jpg" alt="Orenda Spa flyer: lash lift and tint, only $45" width="1280" height="1656" loading="lazy" /></a>
+            <a class="flyer" href="events.html#acne-facial"><img src="figures/web/flyer_acne.jpg" alt="Orenda Spa flyer: acne treatment facial, only $50 for 60 minutes" width="1280" height="1656" loading="lazy" /></a>
+          </div>
+          <div class="door">
+            <div>
+              <h3>New: we can come to you</h3>
+              <p>Door to door service is available for female clients only at Rockville, Gaithersburg, and Germantown area. Contact to check it.</p>
+            </div>
+            <div class="btn-row">
+              <a class="btn" href="tel:+12272683171">Call or text (227) 268-3171</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Smile gallery: decorative stock photos. Swap any picture by changing its file name -->
+      <section class="band">
+        <div class="wrap">
+          <div class="section-head center">
+            <h2>That fresh-from-the-spa feeling</h2>
+            <p class="lede">Soft skin, lifted lashes, and the kind of smile you can't hold back.</p>
+          </div>
+          <div class="smile-wall">
+            <img src="figures/web/smile_blonde_retro.jpg" alt="A blonde woman in a blue retro swimsuit smiling against a pink wall" style="object-position: 50% 15%" loading="lazy" />
+            <img src="figures/web/smile_laugh_orange.jpg" alt="A woman laughing with her eyes closed, glowing skin" style="object-position: 60% 40%" loading="lazy" />
+            <img src="figures/web/smile_beach_blue.jpg" alt="A woman in a light blue bikini laughing on the sand" style="object-position: 50% 30%" loading="lazy" />
+            <img src="figures/web/smile_party_hug.jpg" alt="Two friends hugging cheek to cheek and laughing" style="object-position: 62% 20%" loading="lazy" />
+            <img src="figures/web/smile_curls_rainbow.jpg" alt="A woman with big dark curls in a rainbow swimsuit against a yellow wall" style="object-position: 50% 30%" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <!-- News -->
+      <section class="band band-cream">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>News from the spa</h2>
+          </div>
+          <div class="split">
+            <div class="split-copy">
+              <h3>Traditional spa meets yoga philosophy</h3>
+              <p class="lede">The intersection of natural wisdom and inner peace.</p>
+              <p>Orenda Spa introduces a new holistic wellness journey where traditional spa practices blend seamlessly with yoga philosophy. Guests can embark on a mindfulness-inspired aromatherapy experience, designed to promote inner peace and balance the body and mind.</p>
+            </div>
+            <div class="trio">
+              <img src="figures/web/yoga1.jpg" alt="Camel pose on a yoga mat on the lawn" loading="lazy" />
+              <img src="figures/web/yoga3.jpg" alt="Seated stretch with arms raised to the sun" loading="lazy" />
+              <img src="figures/web/yoga2.jpg" alt="Child's pose on a yoga mat on the lawn" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap split">
+          <div class="frame frame-wide frame-pink"><img src="figures/web/news1.jpg" alt="A water droplet rippling on a calm surface" width="612" height="359" loading="lazy" /></div>
+          <div class="split-copy">
+            <h3>Orenda Spa unveils a symphony of sustainable luxury with Aveda's vegan elixirs</h3>
+            <p>Rockville, Aug 5, 2025. Orenda Spa, an oasis of transcendent wellness in Rockville, is honored to announce its exclusive collaboration with Aveda, the vanguard of luxe, plant-powered beauty.</p>
+            <p>Beginning Aug 2025, discerning guests will indulge in bespoke rituals crafted from Aveda's biotech-infused skincare and body collections, where scientific brilliance meets botanical artistry, all cradled in vegan purity and environmental reverence.</p>
+            <a class="btn btn-outline" href="services.html">Discover now</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Visit -->
+      <section class="band band-cream">
+        <div class="wrap split">
+          <div class="split-copy">
+            <h2>Come and find us</h2>
+            <dl class="visit-list">
+              <div><dt>Address</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=Orenda+Spa+966+Hungerford+Dr+Rockville+MD+20850" target="_blank" rel="noopener noreferrer">966 Hungerford Dr, 28A Room 3<br />Rockville, MD 20850</a></dd></div>
+              <div><dt>Hours</dt><dd>Sunday to Friday, 9:30 AM – 8:30 PM<br />Closed Saturday</dd></div>
+              <div><dt>Phone</dt><dd><a href="tel:+12272683171">(227) 268-3171</a></dd></div>
+            </dl>
+            <div class="btn-row">
+              <a class="btn" href="booking.html">Book now</a>
+              <a class="btn btn-outline" href="contact.html">Map and directions</a>
+            </div>
+          </div>
+          <div class="frame frame-wide frame-violet"><img src="figures/web/location4.jpg" alt="The brick townhouse building where Orenda Spa is located" loading="lazy" /></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (same on every page) -->
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="wordmark">Orenda Spa</p>
+            <p style="margin-top: 14px">The power of nature, in the heart of Rockville.</p>
+            <div class="social">
+              <a href="https://www.instagram.com/orendaspa2025?igsh=anl5M3kyMHd5bG84&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg>
+              </a>
+              <a href="https://www.facebook.com/share/p/1EYyjutKAo/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"/></svg>
+              </a>
+              <a href="https://www.tiktok.com/@orendaspa2025?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.389 2.031h3.157a4.185 4.185 0 0 0 4.183 4.174v3.159a7.409 7.409 0 0 1-3.316-.427v7.803c0 3.893-3.158 7.058-7.046 7.058a7.062 7.062 0 1 1 0-14.125c.086 0 .172.004.257.006v3.16a3.899 3.899 0 1 0 3.899 3.899V2.031z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h2>Visit</h2>
+            <div class="footer-list">
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Orenda+Spa+966+Hungerford+Dr+Rockville+MD+20850" target="_blank" rel="noopener noreferrer">966 Hungerford Dr, 28A Room 3<br />Rockville, MD 20850</a>
+              <a href="tel:+12272683171">(227) 268-3171</a>
+              <a href="mailto:orendaspa2025@gmail.com">orendaspa2025@gmail.com</a>
+              <span>Sunday to Friday, 9:30 AM – 8:30 PM</span>
+            </div>
+          </div>
+          <div>
+            <h2>More</h2>
+            <div class="footer-list">
+              <a href="booking.html">Book an appointment</a>
+              <a href="contact.html">Contact us</a>
+              <button class="link-button" type="button" data-policy="privacy">Privacy policy</button>
+              <button class="link-button" type="button" data-policy="terms">Terms of service</button>
+            </div>
+          </div>
+        </div>
+        <p class="footer-base">© 2025 Orenda Spa. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/site.js"></script>
   </body>
 </html>

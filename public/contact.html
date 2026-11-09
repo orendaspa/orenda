@@ -1,249 +1,170 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
-    />
-
-    <title>Contact us | Orenda Spa</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact and location | Orenda Spa</title>
+    <meta name="description" content="Contact Orenda Spa: 966 Hungerford Dr, 28A Room 3, Rockville, MD 20850. Phone (227) 268-3171." />
+    <link rel="icon" type="image/png" href="figures/web/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" />
+    <link rel="stylesheet" href="css/site.css" />
   </head>
   <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Manrope, "Noto Sans", sans-serif;'>
-      <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f1f3f4] px-10 py-3">
-          <div class="flex items-center gap-4 text-[#121516]">
-            <div class="size-16">
-              <img src="figures/logo.jpg" alt="Orenda Spa Logo" class="w-full h-full object-contain" />
-            </div>
-            <h2 class="text-[#121516] text-lg font-bold leading-tight tracking-[-0.015em]">Orenda Spa</h2>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <!-- Announcement bar: edit or delete this block to change the message at the very top -->
+    <div class="topbar">
+      New: door-to-door service for female clients.<a href="contact.html">Check your area</a>
+    </div>
+
+    <!-- Header (same on every page) -->
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="index.html"><img src="figures/web/logo.png" alt="Orenda Spa — the power of nature" width="400" height="245" /></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" id="site-nav" aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="events.html">Events</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+          <a class="btn btn-small" href="booking.html">Book now</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-head">
+        <div class="wrap">
+          <div class="page-head-copy">
+            <h1>Contact us</h1>
+            <p class="lede">We're here to help. Reach out to us with any questions or to book your next spa experience.</p>
           </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
-              <a class="text-[#121516] text-sm font-medium leading-normal" href="index.html">Home</a>
-              <a class="text-[#121516] text-sm font-medium leading-normal" href="services.html">Services</a>
-              <a class="text-[#121516] text-sm font-medium leading-normal" href="events.html">Events</a>
-              <a class="text-[#121516] text-sm font-medium leading-normal" href="about.html">About</a>
-              <a class="text-[#121516] text-sm font-medium leading-normal" href="contact.html">Contact</a>
+          <div class="page-head-photo"><img class="shape circle" src="figures/web/smile_pink_hair.jpg" alt="A woman with short pink hair laughing" style="object-position: 40% 25%" /></div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap form-layout">
+          <form id="contact-form" class="form" novalidate>
+            <div class="form-pair">
+              <label class="field">
+                <span>Your name</span>
+                <input id="contact-name" placeholder="Enter your name" autocomplete="name" />
+              </label>
+              <label class="field">
+                <span>Your email</span>
+                <input id="contact-email" type="email" placeholder="Enter your email" autocomplete="email" />
+              </label>
             </div>
-            <a
-              href="booking.html"
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#b2d8e5] text-[#121516] text-sm font-bold leading-normal tracking-[0.015em]"
-            >
-              <span class="truncate">Book Now</span>
-            </a>
+            <label class="field">
+              <span>Subject</span>
+              <input id="contact-subject" placeholder="Enter the subject" />
+            </label>
+            <label class="field">
+              <span>Message</span>
+              <textarea id="contact-message" placeholder="Enter your message"></textarea>
+            </label>
+            <div class="btn-row">
+              <button id="contact-submit" class="btn" type="submit">Send message</button>
+            </div>
+            <p id="contact-status" class="form-message" role="status"></p>
+          </form>
+
+          <aside class="side-card">
+            <h2>Business hours</h2>
+            <table class="hours">
+              <tbody>
+                <tr data-day="1"><th scope="row">Monday</th><td>9:30 AM – 8:30 PM</td></tr>
+                <tr data-day="2"><th scope="row">Tuesday</th><td>9:30 AM – 8:30 PM</td></tr>
+                <tr data-day="3"><th scope="row">Wednesday</th><td>9:30 AM – 8:30 PM</td></tr>
+                <tr data-day="4"><th scope="row">Thursday</th><td>9:30 AM – 8:30 PM</td></tr>
+                <tr data-day="5"><th scope="row">Friday</th><td>9:30 AM – 8:30 PM</td></tr>
+                <tr data-day="6"><th scope="row">Saturday</th><td>Closed</td></tr>
+                <tr data-day="0"><th scope="row">Sunday</th><td>9:30 AM – 8:30 PM</td></tr>
+              </tbody>
+            </table>
+            <dl class="visit-list">
+              <div><dt>Address</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=Orenda+Spa+966+Hungerford+Dr+Rockville+MD+20850" target="_blank" rel="noopener noreferrer">966 Hungerford Dr, 28A Room 3<br />Rockville, MD 20850</a></dd></div>
+              <div><dt>Phone</dt><dd><a href="tel:+12272683171">(227) 268-3171</a></dd></div>
+              <div><dt>Email</dt><dd><a href="mailto:orendaspa2025@gmail.com">orendaspa2025@gmail.com</a></dd></div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="band band-cream">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Our location</h2>
+            <p class="lede">966 Hungerford Dr, 28A Room 3, Rockville, MD 20850. These photos show the way from the parking lot to our door.</p>
           </div>
-        </header>
-        <!-- 内容部分 -->
-        <div class="px-4 md:px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="flex flex-wrap justify-between gap-3 p-4">
-              <div class="flex min-w-72 flex-col gap-3">
-                <p class="text-[#121614] tracking-light text-[32px] font-bold leading-tight">Contact Us</p>
-                <p class="text-[#6a8175] text-sm font-normal leading-normal">We're here to help. Reach out to us with any questions or to book your next spa experience.</p>
-              </div>
+          <div class="map">
+            <iframe
+              title="Map showing Orenda Spa in Rockville, Maryland"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3096.300725996778!2d-77.15765282311902!3d39.099623071681684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7cde7fd3c0ddb%3A0x28646418c6773812!2sOrenda%20Spa!5e0!3m2!1sen!2sus!4v1756792900873!5m2!1sen!2sus"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="gallery" style="margin-top: clamp(10px, 1.6vw, 20px)">
+            <img src="figures/web/location1.jpg" alt="Location view 1: the entrance from the street" loading="lazy" />
+            <img src="figures/web/location2.jpg" alt="Location view 2: the parking lot" loading="lazy" />
+            <img src="figures/web/location3.jpg" alt="Location view 3: the walkway beside the building" loading="lazy" />
+            <img src="figures/web/location4.jpg" alt="Location view 4: the front of the building" loading="lazy" />
+            <img src="figures/web/location5.jpg" alt="Location view 5: the red door to 28A" loading="lazy" />
+            <img src="figures/web/location6.jpg" alt="Location view 6: the door marked 28 A" loading="lazy" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (same on every page) -->
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="wordmark">Orenda Spa</p>
+            <p style="margin-top: 14px">The power of nature, in the heart of Rockville.</p>
+            <div class="social">
+              <a href="https://www.instagram.com/orendaspa2025?igsh=anl5M3kyMHd5bG84&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg>
+              </a>
+              <a href="https://www.facebook.com/share/p/1EYyjutKAo/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"/></svg>
+              </a>
+              <a href="https://www.tiktok.com/@orendaspa2025?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.389 2.031h3.157a4.185 4.185 0 0 0 4.183 4.174v3.159a7.409 7.409 0 0 1-3.316-.427v7.803c0 3.893-3.158 7.058-7.046 7.058a7.062 7.062 0 1 1 0-14.125c.086 0 .172.004.257.006v3.16a3.899 3.899 0 1 0 3.899 3.899V2.031z"/></svg>
+              </a>
             </div>
-            <!-- 表单开始 -->
-            <form onsubmit="sendMessage(event)">
-              <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-                <label class="flex flex-col min-w-40 flex-1">
-                  <p class="text-[#121614] text-base font-medium leading-normal pb-2">Your Name</p>
-                  <input
-                    id="contact-name"
-                    placeholder="Enter your name"
-                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#121614] focus:outline-0 focus:ring-0 border border-[#dde3e0] bg-white focus:border-[#dde3e0] h-14 placeholder:text-[#6a8175] p-[15px] text-base font-normal leading-normal"
-                    value=""
-                  />
-                </label>
-              </div>
-              <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-                <label class="flex flex-col min-w-40 flex-1">
-                  <p class="text-[#121614] text-base font-medium leading-normal pb-2">Your Email</p>
-                  <input
-                    id="contact-email"
-                    placeholder="Enter your email"
-                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#121614] focus:outline-0 focus:ring-0 border border-[#dde3e0] bg-white focus:border-[#dde3e0] h-14 placeholder:text-[#6a8175] p-[15px] text-base font-normal leading-normal"
-                    value=""
-                  />
-                </label>
-              </div>
-              <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-                <label class="flex flex-col min-w-40 flex-1">
-                  <p class="text-[#121614] text-base font-medium leading-normal pb-2">Subject</p>
-                  <input
-                    id="contact-subject"
-                    placeholder="Enter the subject"
-                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#121614] focus:outline-0 focus:ring-0 border border-[#dde3e0] bg-white focus:border-[#dde3e0] h-14 placeholder:text-[#6a8175] p-[15px] text-base font-normal leading-normal"
-                    value=""
-                  />
-                </label>
-              </div>
-              <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
-                <label class="flex flex-col min-w-40 flex-1">
-                  <p class="text-[#121614] text-base font-medium leading-normal pb-2">Message</p>
-                  <textarea
-                    id="contact-message"
-                    placeholder="Enter your message"
-                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#121614] focus:outline-0 focus:ring-0 border border-[#dde3e0] bg-white focus:border-[#dde3e0] min-h-36 placeholder:text-[#6a8175] p-[15px] text-base font-normal leading-normal"
-                  ></textarea>
-                </label>
-              </div>
-              <div class="flex px-4 py-3 justify-start">
-                <button
-                  type="submit"
-                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#3fbf7f] text-[#121614] text-sm font-bold leading-normal tracking-[0.015em]"
-                >
-                  <span class="truncate">Send Message</span>
-                </button>
-              </div>
-            </form>
-            <!-- 表单结束 -->
-            <h2 class="text-[#121614] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Our Location</h2>
-            <div class="flex px-4 py-3">
-              <div class="w-full aspect-video rounded-xl overflow-hidden">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3096.300725996778!2d-77.15765282311902!3d39.099623071681684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7cde7fd3c0ddb%3A0x28646418c6773812!2sOrenda%20Spa!5e0!3m2!1szh-CN!2sus!4v1756792900873!5m2!1szh-CN!2sus"
-                  width="100%"
-                  height="100%"
-                  frameborder="0"
-                  style="border:0;"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-              </div>
+          </div>
+          <div>
+            <h2>Visit</h2>
+            <div class="footer-list">
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Orenda+Spa+966+Hungerford+Dr+Rockville+MD+20850" target="_blank" rel="noopener noreferrer">966 Hungerford Dr, 28A Room 3<br />Rockville, MD 20850</a>
+              <a href="tel:+12272683171">(227) 268-3171</a>
+              <a href="mailto:orendaspa2025@gmail.com">orendaspa2025@gmail.com</a>
+              <span>Sunday to Friday, 9:30 AM – 8:30 PM</span>
             </div>
-            <div class="w-full px-4 py-3 flex justify-center">
-              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-[960px]">
-                <img src="figures/location1.jpg" alt="Location view 1" class="aspect-square object-cover rounded-lg shadow border border-[#dde3e0] w-full max-h-64" loading="lazy">
-                <img src="figures/location2.jpg" alt="Location view 2" class="aspect-square object-cover rounded-lg shadow border border-[#dde3e0] w-full max-h-64" loading="lazy">
-                <img src="figures/location3.jpg" alt="Location view 3" class="aspect-square object-cover rounded-lg shadow border border-[#dde3e0] w-full max-h-64" loading="lazy">
-                <img src="figures/location4.jpg" alt="Location view 4" class="aspect-square object-cover rounded-lg shadow border border-[#dde3e0] w-full max-h-64" loading="lazy">
-                <img src="figures/location5.jpg" alt="Location view 5" class="aspect-square object-cover rounded-lg shadow border border-[#dde3e0] w-full max-h-64" loading="lazy">
-                <img src="figures/location6.jpg" alt="Location view 6" class="aspect-square object-cover rounded-lg shadow border border-[#dde3e0] w-full max-h-64" loading="lazy">
-              </div>
-            </div>
-            <div class="mt-3 mb-3 px-0">
-              <p class="text-[#121614] text-base font-normal leading-normal pb-3 pt-1 px-4">966 Hungerford Dr 28a room3, Rockville, MD 20850</p>
-              <p class="text-[#121614] text-base font-normal leading-normal pb-3 pt-1 px-4">(227) 268-3171</p>
-              <p class="text-[#121614] text-base font-normal leading-normal pb-3 pt-1 px-4">orendaspa2025@gmail.com </p>
-            </div>
-            <h2 class="text-[#121614] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Business Hours</h2>
-            <div class="p-4 grid grid-cols-[20%_1fr] gap-x-6">
-              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#dde3e0] py-5">
-                <p class="text-[#6a8175] text-sm font-normal leading-normal">Monday</p>
-                <p class="text-[#121614] text-sm font-normal leading-normal">9:30 AM - 8:30 PM</p>
-              </div>
-              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#dde3e0] py-5">
-                <p class="text-[#6a8175] text-sm font-normal leading-normal">Tuesday</p>
-                <p class="text-[#121614] text-sm font-normal leading-normal">9:30 AM - 8:30 PM</p>
-              </div>
-              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#dde3e0] py-5">
-                <p class="text-[#6a8175] text-sm font-normal leading-normal">Wednesday</p>
-                <p class="text-[#121614] text-sm font-normal leading-normal">9:30 AM - 8:30 PM</p>
-              </div>
-              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#dde3e0] py-5">
-                <p class="text-[#6a8175] text-sm font-normal leading-normal">Thursday</p>
-                <p class="text-[#121614] text-sm font-normal leading-normal">9:30 AM - 8:30 PM</p>
-              </div>
-              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#dde3e0] py-5">
-                <p class="text-[#6a8175] text-sm font-normal leading-normal">Friday</p>
-                <p class="text-[#121614] text-sm font-normal leading-normal">9:30 AM - 8:30 PM</p>
-              </div>
-              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#dde3e0] py-5">
-                <p class="text-[#6a8175] text-sm font-normal leading-normal">Saturday</p>
-                <p class="text-[#121614] text-sm font-normal leading-normal">Closed</p>
-              </div>
-              <div class="col-span-2 grid grid-cols-subgrid border-t border-t-[#dde3e0] py-5">
-                <p class="text-[#6a8175] text-sm font-normal leading-normal">Sunday</p>
-                <p class="text-[#121614] text-sm font-normal leading-normal">9:30 am - 8:30 pm</p>
-              </div>
+          </div>
+          <div>
+            <h2>More</h2>
+            <div class="footer-list">
+              <a href="booking.html">Book an appointment</a>
+              <a href="contact.html">Contact us</a>
+              <button class="link-button" type="button" data-policy="privacy">Privacy policy</button>
+              <button class="link-button" type="button" data-policy="terms">Terms of service</button>
             </div>
           </div>
         </div>
-        <!-- Footer -->
-        <footer class="flex justify-center">
-          <div class="flex max-w-[960px] flex-1 flex-col">
-            <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
-              <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
-                <a class="text-[#6a7b81] text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
-                <a class="text-[#6a7b81] text-base font-normal leading-normal min-w-40" href="#">Terms of Service</a>
-                <a class="text-[#6a7b81] text-base font-normal leading-normal min-w-40" href="contact.html">Contact Us</a>
-              </div>
-              <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://www.instagram.com/orendaspa2025?igsh=anl5M3kyMHd5bG84&utm_source=qr" target="_blank" rel="noopener noreferrer">
-                  <!-- Instagram SVG ... -->
-                </a>
-                <a href="https://www.facebook.com/share/p/1EYyjutKAo/" target="_blank" rel="noopener noreferrer">
-                  <!-- Facebook SVG ... -->
-                </a>
-                <a href="https://www.tiktok.com/@orendaspa2025?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">
-                  <!-- TikTok SVG ... -->
-                </a>
-              </div>
-              <p class="text-[#6a7b81] text-base font-normal leading-normal">© 2025 Orenda Spa. All rights reserved.</p>
-            </footer>
-          </div>
-        </footer>
+        <p class="footer-base">© 2025 Orenda Spa. All rights reserved.</p>
       </div>
-    </div>
-    <script>
-      function validateEmail(email) {
-        // 简易邮箱校验
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-      }
+    </footer>
 
-      async function sendMessage(event) {
-        event.preventDefault();
-        const name = document.getElementById('contact-name').value.trim();
-        const email = document.getElementById('contact-email').value.trim();
-        const subject = document.getElementById('contact-subject').value.trim();
-        const message = document.getElementById('contact-message').value.trim();
-
-        if (!name) {
-          alert('Please enter your name.');
-          return;
-        }
-        if (!email) {
-          alert('Please enter your email.');
-          return;
-        }
-        if (!validateEmail(email)) {
-          alert('Please enter a valid email address.');
-          return;
-        }
-        if (!subject) {
-          alert('Please enter the subject.');
-          return;
-        }
-
-        try {
-          const res = await fetch("/send", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ name, email, subject, message })
-          });
-          const data = await res.json();
-          if (data.success) {
-            alert('Message sent!');
-            // 可选：清空表单
-            document.getElementById('contact-name').value = '';
-            document.getElementById('contact-email').value = '';
-            document.getElementById('contact-subject').value = '';
-            document.getElementById('contact-message').value = '';
-          } else {
-            alert('Failed to send email: ' + (data.error || 'Unknown error'));
-          }
-        } catch (error) {
-          alert('Failed to send email: ' + error.toString());
-        }
-      }
-    </script>
+    <script src="js/site.js"></script>
   </body>
 </html>

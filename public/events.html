@@ -1,288 +1,152 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&family=Manrope:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900"
-    />
-    <title>Spa Events | Orenda Spa</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Events and promotions | Orenda Spa</title>
+    <meta name="description" content="Current special offers at Orenda Spa in Rockville, MD: Brazilian wax, back treatment spa, lash lift and tint, and acne treatment facial." />
+    <link rel="icon" type="image/png" href="figures/web/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" />
+    <link rel="stylesheet" href="css/site.css" />
   </head>
   <body>
-    <div class="relative flex min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Manrope, "Noto Sans", sans-serif;'>
-      <div class="layout-container flex h-full grow flex-col">
-        <!-- 统一的导航栏 -->
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f1f3f4] px-10 py-3">
-          <div class="flex items-center gap-4 text-[#121516]">
-            <div class="size-16">
-              <img src="figures/logo.jpg" alt="Orenda Spa Logo" class="w-full h-full object-contain" />
-            </div>
-            <h2 class="text-[#121516] text-lg font-bold leading-tight tracking-[-0.015em]">Orenda Spa</h2>
-          </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
-              <a class="text-[#121516] text-sm font-medium leading-normal" href="index.html">Home</a>  
-              <a class="text-[#121516] text-sm font-medium leading-normal" href="services.html">Services</a>
-              <a class="text-[#121516] text-sm font-medium leading-normal" href="events.html">Events</a>
-              <a class="text-[#121516] text-sm font-medium leading-normal" href="about.html">About</a>
-              <a class="text-[#121516] text-sm font-medium leading-normal" href="contact.html">Contact</a>
-            </div>
-            <a
-              href="booking.html"
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#b2d8e5] text-[#121516] text-sm font-bold leading-normal tracking-[0.015em]"
-            >
-              <span class="truncate">Book Now</span>
-            </a>
-          </div>
-        </header>
-        
-        <!-- 页面主体 -->
-        <div class="flex flex-1 justify-center py-10 bg-gradient-to-t from-[#e7f7fa] via-white to-white px-4">
-          <div class="layout-content-container flex flex-col max-w-[1200px] w-full items-center gap-12">
-            
-            <!-- 页面标题 -->
-            <div class="text-center mb-8">
-              <h1 class="text-4xl lg:text-5xl font-black text-[#162124] mb-4">Current Events & Promotions</h1>
-              <p class="text-xl text-[#6a7b81] max-w-2xl mx-auto">Discover our latest offers and special treatments designed to enhance your wellness journey</p>
-            </div>
+    <a class="skip" href="#main">Skip to content</a>
 
-            <!-- Events容器 -->
-            <div class="w-full space-y-12">
-              <!-- 第三个 Event：Image Only -->
-              <div class="relative flex flex-col lg:flex-row items-center rounded-2xl bg-gradient-to-br from-[#f5f5f5] to-[#fafafa] shadow-lg w-full overflow-hidden mb-8">
-                
-                <!-- 图片区域 -->
-                <div class="relative w-full">
-                  <img
-                    src="figures/blackfriday.jpg"
-                    alt="New Event Image"
-                    class="w-full aspect-[3/4] object-cover"
-                  />
-                </div>
-
-              </div>
-              
-              <!-- 第一个Event: Hydrating Facial -->
-              <div class="relative flex flex-col lg:flex-row items-center rounded-2xl bg-[#e8f4f8] shadow-lg w-full overflow-hidden">
-                <!-- 左侧内容区域 -->
-                <div class="lg:w-1/2 w-full p-8 lg:p-10 order-2 lg:order-1">
-                  <!-- 标题区域 -->
-                  <div class="text-center mb-8">
-                    <h1 class="text-3xl lg:text-4xl font-black text-[#162124] mb-4 leading-tight">
-                      Hydrogen Oxygen <span class="text-[#2e6470]">Hydrating Facial</span>
-                    </h1>
-                    <p class="text-[#486c74] text-xl font-medium">
-                      Experience the ultimate in skin rejuvenation with our advanced hydrating facial treatment
-                    </p>
-                  </div>
-
-                  <!-- 双栏布局：Benefits & Ideal for -->
-                  <div class="grid md:grid-cols-2 gap-6 mb-8">
-                    <div class="bg-white/50 backdrop-blur-sm p-6 rounded-xl border border-white/30">
-                      <h4 class="flex items-center text-[#2e6470] font-bold text-lg mb-4">
-                        <span class="mr-2">✨</span>Benefits
-                      </h4>
-                      <ul class="text-[#6a7b81] text-base space-y-3">
-                        <li class="flex items-center gap-3">
-                          <span class="w-2 h-2 bg-[#b2d8e5] rounded-full"></span>
-                          Smaller pores & improved texture
-                        </li>
-                        <li class="flex items-center gap-3">
-                          <span class="w-2 h-2 bg-[#b2d8e5] rounded-full"></span>
-                          Youthful glow & deep hydration
-                        </li>
-                        <li class="flex items-center gap-3">
-                          <span class="w-2 h-2 bg-[#b2d8e5] rounded-full"></span>
-                          Reduce fine lines & wrinkles
-                        </li>
-                        <li class="flex items-center gap-3">
-                          <span class="w-2 h-2 bg-[#b2d8e5] rounded-full"></span>
-                          Stimulate collagen production
-                        </li>
-                      </ul>
-                    </div>
-                    
-                    <div class="bg-white/50 backdrop-blur-sm p-6 rounded-xl border border-white/30">
-                      <h4 class="flex items-center text-[#2e6470] font-bold text-lg mb-4">
-                        <span class="mr-2">🎯</span>Ideal For
-                      </h4>
-                      <ul class="text-[#6a7b81] text-base space-y-3">
-                        <li class="flex items-center gap-3">
-                          <span class="w-2 h-2 bg-[#2e6470] rounded-full"></span>
-                          Brown spots & dull skin
-                        </li>
-                        <li class="flex items-center gap-3">
-                          <span class="w-2 h-2 bg-[#2e6470] rounded-full"></span>
-                          Enlarged pores or acne
-                        </li>
-                        <li class="flex items-center gap-3">
-                          <span class="w-2 h-2 bg-[#2e6470] rounded-full"></span>
-                          Fine lines & wrinkles
-                        </li>
-                        <li class="flex items-center gap-3">
-                          <span class="w-2 h-2 bg-[#2e6470] rounded-full"></span>
-                          Uneven skin tone & texture
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <!-- CTA 按钮区域 -->
-                  <div class="text-center">
-                    <p class="text-[#2e6470] font-bold text-xl mb-6">
-                      Transform your skin today for just <span class="text-3xl">$180</span>
-                    </p>
-                    <a
-                      href="booking.html"
-                      class="inline-flex items-center gap-3 bg-[#2e6470] hover:bg-[#1e4a54] px-10 py-5 rounded-full text-xl font-bold text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                    >
-                      <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10 2c-2 4-6 6-6 10a6 6 0 1 0 12 0c0-4-4-6-6-10z"/>
-                      </svg>
-                      Book Hydrating Facial
-                      <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                      </svg>
-                    </a>
-                    
-                    <!-- 附加信息 -->
-                    <div class="mt-6 flex flex-wrap justify-center gap-6 text-sm text-[#6a7b81]">
-                      <span class="flex items-center gap-2">
-                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                        </svg>
-                        60-minute session
-                      </span>
-                      <span class="flex items-center gap-2">
-                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                          <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
-                        </svg>
-                        Same-day booking available
-                      </span>
-                      <span class="flex items-center gap-2">
-                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                          <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
-                        </svg>
-                        All skin types welcome
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- 右侧图片区域 -->
-                <div class="relative lg:w-1/2 w-full order-1 lg:order-2">
-                  <img
-                    src="figures/hydrating.jpg"
-                    alt="Hydrating Facial"
-                    class="w-full aspect-[1/2] object-cover"
-                  />
-                  <!-- 价格角标 -->
-                  <!-- <div class="absolute top-4 left-4 flex items-center gap-2 bg-[#2e6470] px-4 py-2 rounded-full shadow-lg text-white font-extrabold text-xl">
-                    <span class="text-2xl">💧</span>
-                    <span>$120</span>
-                  </div> -->
-                </div>
-              </div>
-
-              <!-- 第二个Event: New Customer Welcome Offer -->
-              <div class="relative flex flex-col items-center rounded-xl bg-[#b2d8e511] shadow-md w-full">
-                <!-- 活动图片 -->
-                <img
-                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80"
-                  alt="Spa Welcome"
-                  class="rounded-t-xl w-full aspect-[2.3/1] object-cover"
-                />
-                <!-- 活动折扣角标 -->
-                <div class="absolute -top-4 left-4 flex items-center gap-2 bg-[#b2d8e5] px-4 py-1 rounded-full shadow text-[#121516] font-extrabold text-lg shadow-md">
-                  <!-- Sparkle Icon -->
-                  <svg width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#2e6470" d="M10 2.5c.28 0 .54.15.67.39l1.83 3.23a1 1 0 0 0 .55.44l3.54 1.09a.75.75 0 0 1 0 1.43l-3.54 1.1a1 1 0 0 0-.55.44L10.68 14.1a.75.75 0 0 1-1.36 0L7.5 10.62a1 1 0 0 0-.54-.44l-3.54-1.09a.75.75 0 0 1 0-1.43l3.54-1.1a1 1 0 0 0 .54-.44L9.32 2.89A.75.75 0 0 1 10 2.5Z"/></svg>
-                  20% OFF
-                </div>
-                <!-- 活动主信息 -->
-                <div class="flex flex-col gap-2 px-8 py-8 items-center w-full">
-                  <!-- 手心icon -->
-                  <div class="mb-2">
-                    <svg fill="none" viewBox="0 0 32 32" width="48" height="48" class="mx-auto">
-                      <circle cx="16" cy="16" r="16" fill="#b2d8e5"/>
-                      <path d="M10 15v5a4 4 0 1 0 8 0v-8h2.5A1.5 1.5 0 0 1 22 13.5v3" stroke="#2e6470" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M14 15v5a2 2 0 0 0 4 0v-6" stroke="#2e6470" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </div>
-                  <h1 class="text-3xl font-extrabold text-[#162124] text-center">New Customer Welcome Offer</h1>
-                  <p class="text-[#486c74] text-base font-medium text-center">
-                    First time at Orenda Spa? <span class="text-[#2e6470] font-bold">Enjoy 20% OFF</span> your first service — any treatment, any time!
-                  </p>
-                  <ul class="flex flex-col items-center gap-1 text-base text-[#637f88] mt-2">
-                    <li class="flex items-center gap-2">
-                      <svg class="w-4 h-4 text-[#b2d8e5]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 6.293a1 1 0 0 0-1.414 0l-6.293 6.293-2.793-2.793A1 1 0 0 0 4.293 11.707l3.5 3.5a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z"/></svg>
-                      No code needed, just mention this offer at your first visit
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <svg class="w-4 h-4 text-[#b2d8e5]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 6.293a1 1 0 0 0-1.414 0l-6.293 6.293-2.793-2.793A1 1 0 0 0 4.293 11.707l3.5 3.5a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z"/></svg>
-                      Any facial, massage, or wellness treatment included
-                    </li>
-                    <li class="flex items-center gap-2">
-                      <svg class="w-4 h-4 text-[#b2d8e5]" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 6.293a1 1 0 0 0-1.414 0l-6.293 6.293-2.793-2.793A1 1 0 0 0 4.293 11.707l3.5 3.5a1 1 0 0 0 1.414 0l7-7a1 1 0 0 0 0-1.414z"/></svg>
-                      One-time use, for new clients only
-                    </li>
-                  </ul>
-                  <a
-                    href="booking.html"
-                    class="flex mt-5 bg-[#b2d8e5] hover:bg-[#98cbe0] px-8 py-3 rounded-full text-lg font-bold text-[#121516] shadow-md transition shadow-[#8cd6ef22]"
-                  >
-                    Book Now &amp; Save 20%
-                  </a>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
+    <!-- Announcement bar: edit or delete this block to change the message at the very top -->
+    <div class="topbar">
+      New: door-to-door service for female clients.<a href="contact.html">Check your area</a>
     </div>
-    
-    <!-- Footer -->
-    <footer class="flex justify-center bg-[#f7fafd] border-t border-[#e1ebed] mt-8">
-      <div class="flex max-w-[960px] flex-1 flex-col">
-        <div class="flex flex-col gap-6 px-5 py-8 text-center @container">
-          <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
-            <a class="text-[#6a7b81] text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
-            <a class="text-[#6a7b81] text-base font-normal leading-normal min-w-40" href="#">Terms of Service</a>
-            <a class="text-[#6a7b81] text-base font-normal leading-normal min-w-40" href="contact.html">Contact Us</a>
+
+    <!-- Header (same on every page) -->
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="index.html"><img src="figures/web/logo.png" alt="Orenda Spa — the power of nature" width="400" height="245" /></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" id="site-nav" aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="events.html" aria-current="page">Events</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a class="btn btn-small" href="booking.html">Book now</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-head">
+        <div class="wrap">
+          <div class="page-head-copy">
+            <h1>Current events and promotions</h1>
+            <p class="lede">Discover our latest offers and special treatments designed to enhance your wellness journey.</p>
           </div>
-          <div class="flex flex-wrap justify-center gap-4">
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/orendaspa2025?igsh=anl5M3kyMHd5bG84&utm_source=qr" target="_blank" rel="noopener noreferrer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                  viewBox="0 0 256 256" class="w-6 h-6 text-[#6a7b81] hover:text-[#b2d8e5] transition">
-                <path
-                  d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/>
-              </svg>
-            </a>
-            <!-- Facebook -->
-            <a href="https://www.facebook.com/share/p/1EYyjutKAo/" target="_blank" rel="noopener noreferrer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                  viewBox="0 0 256 256" class="w-6 h-6 text-[#6a7b81] hover:text-[#b2d8e5] transition">
-                <path
-                  d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"/>
-              </svg>
-            </a>
-            <!-- Tiktok -->
-            <a href="https://www.tiktok.com/@orendaspa2025?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                  viewBox="0 0 256 256" class="w-6 h-6 text-[#6a7b81] hover:text-[#b2d8e5] transition">
-                <path d="M216,72.7a55.85,55.85,0,0,1-32-10.68V152A80,80,0,1,1,104,72a8,8,0,0,1,0,16,64,64,0,1,0,64,64V32a8,8,0,0,1,8-8h24a8,8,0,0,1,0,16H184v32.43a39.87,39.87,0,0,0,32,13.27,8,8,0,0,1,0,16Z"/>
-              </svg>
-            </a>
-          </div>
-          <p class="text-[#6a7b81] text-base font-normal leading-normal">© 2025 Orenda Spa. All rights reserved.</p>
+          <div class="page-head-photo"><img class="shape circle" src="figures/web/smile_party_dance.jpg" alt="Two friends in party dresses dancing" style="object-position: 45% 20%" /></div>
         </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap">
+          <div class="special-grid">
+          <article class="special" id="brazilian-wax">
+            <a class="flyer" href="figures/web/flyer_wax.jpg" target="_blank" rel="noopener"><img src="figures/web/flyer_wax.jpg" alt="Orenda Spa waxing service flyer: Brazilian wax special offer, only $50" width="1280" height="1656" loading="lazy" /></a>
+            <div class="special-copy">
+              <h2>Brazilian wax</h2>
+              <p>Smooth results: soft, smooth skin you can feel good about.</p>
+              <p class="price-line"><span class="price-tag">$50</span> <s>$80</s></p>
+              <a class="btn" href="booking.html">Book now</a>
+            </div>
+          </article>
+          <article class="special" id="back-treatment">
+            <a class="flyer" href="figures/web/flyer_back.jpg" target="_blank" rel="noopener"><img src="figures/web/flyer_back.jpg" alt="Orenda Spa flyer: back treatment spa, only $50 for 50 minutes" width="1280" height="1656" loading="lazy" /></a>
+            <div class="special-copy">
+              <h2>Back treatment spa</h2>
+              <p>A calm, caring treatment for your back. Fifty minutes.</p>
+              <ul class="fact-row"><li>Cleansing</li><li>Exfoliating</li><li>Massage</li><li>Back skin care</li></ul>
+              <p class="price-line"><span class="price-tag">$50</span> <s>$80</s></p>
+              <a class="btn" href="booking.html">Book now</a>
+            </div>
+          </article>
+          <article class="special" id="lash-lift">
+            <a class="flyer" href="figures/web/flyer_lash.jpg" target="_blank" rel="noopener"><img src="figures/web/flyer_lash.jpg" alt="Orenda Spa flyer: lash lift and tint, only $45" width="1280" height="1656" loading="lazy" /></a>
+            <div class="special-copy">
+              <h2>Lash lift and tint</h2>
+              <p>Lifted, darker-looking lashes for a bright, open-eyed look.</p>
+              <p class="price-line"><span class="price-tag">$45</span> <s>$80</s></p>
+              <a class="btn" href="booking.html">Book now</a>
+            </div>
+          </article>
+          <article class="special" id="acne-facial">
+            <a class="flyer" href="figures/web/flyer_acne.jpg" target="_blank" rel="noopener"><img src="figures/web/flyer_acne.jpg" alt="Orenda Spa flyer: acne treatment facial, only $50 for 60 minutes" width="1280" height="1656" loading="lazy" /></a>
+            <div class="special-copy">
+              <h2>Acne treatment facial</h2>
+              <p>60 minutes of focused facial care.</p>
+              <ul class="fact-row"><li>Cleansing</li><li>Steaming</li><li>Extracting</li><li>Masque</li><li>Repairing</li></ul>
+              <p class="price-line"><span class="price-tag">$50</span> <s>$80</s></p>
+              <a class="btn" href="booking.html">Book now</a>
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="band band-aqua">
+        <div class="wrap promise">
+          <h2>New: we can come to you</h2>
+          <p class="lede">Door to door service is available for female clients only at Rockville, Gaithersburg, and Germantown area. Contact to check it.</p>
+          <div class="btn-row">
+            <a class="btn btn-sun" href="tel:+12272683171">Call or text (227) 268-3171</a>
+            <a class="btn btn-outline" href="contact.html">Send a message</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (same on every page) -->
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="wordmark">Orenda Spa</p>
+            <p style="margin-top: 14px">The power of nature, in the heart of Rockville.</p>
+            <div class="social">
+              <a href="https://www.instagram.com/orendaspa2025?igsh=anl5M3kyMHd5bG84&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg>
+              </a>
+              <a href="https://www.facebook.com/share/p/1EYyjutKAo/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"/></svg>
+              </a>
+              <a href="https://www.tiktok.com/@orendaspa2025?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.389 2.031h3.157a4.185 4.185 0 0 0 4.183 4.174v3.159a7.409 7.409 0 0 1-3.316-.427v7.803c0 3.893-3.158 7.058-7.046 7.058a7.062 7.062 0 1 1 0-14.125c.086 0 .172.004.257.006v3.16a3.899 3.899 0 1 0 3.899 3.899V2.031z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h2>Visit</h2>
+            <div class="footer-list">
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Orenda+Spa+966+Hungerford+Dr+Rockville+MD+20850" target="_blank" rel="noopener noreferrer">966 Hungerford Dr, 28A Room 3<br />Rockville, MD 20850</a>
+              <a href="tel:+12272683171">(227) 268-3171</a>
+              <a href="mailto:orendaspa2025@gmail.com">orendaspa2025@gmail.com</a>
+              <span>Sunday to Friday, 9:30 AM – 8:30 PM</span>
+            </div>
+          </div>
+          <div>
+            <h2>More</h2>
+            <div class="footer-list">
+              <a href="booking.html">Book an appointment</a>
+              <a href="contact.html">Contact us</a>
+              <button class="link-button" type="button" data-policy="privacy">Privacy policy</button>
+              <button class="link-button" type="button" data-policy="terms">Terms of service</button>
+            </div>
+          </div>
+        </div>
+        <p class="footer-base">© 2025 Orenda Spa. All rights reserved.</p>
       </div>
     </footer>
+
+    <script src="js/site.js"></script>
   </body>
 </html>

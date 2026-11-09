@@ -1,157 +1,141 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <title>About us | Orenda Spa</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About | Orenda Spa</title>
+    <meta name="description" content="Orenda Spa was founded by Banyan Xu, a licensed esthetician in Rockville, Maryland. Science-backed skincare meets holistic wellness." />
+    <link rel="icon" type="image/png" href="figures/web/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" />
+    <link rel="stylesheet" href="css/site.css" />
   </head>
   <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Manrope, "Noto Sans", sans-serif;'>
-      <div class="layout-container flex h-full grow flex-col">
-        <!-- 统一导航栏 -->
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f1f3f4] px-10 py-3">
-          <div class="flex items-center gap-4 text-[#121516]">
-            <div class="size-16">
-              <img src="figures/logo.jpg" alt="Orenda Spa Logo" class="w-full h-full object-contain" />
-            </div>
-            <h2 class="text-[#121516] text-lg font-bold leading-tight tracking-[-0.015em]">Orenda Spa</h2>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <!-- Announcement bar: edit or delete this block to change the message at the very top -->
+    <div class="topbar">
+      New: door-to-door service for female clients.<a href="contact.html">Check your area</a>
+    </div>
+
+    <!-- Header (same on every page) -->
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="index.html"><img src="figures/web/logo.png" alt="Orenda Spa — the power of nature" width="400" height="245" /></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" id="site-nav" aria-label="Main">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="events.html">Events</a>
+          <a href="about.html" aria-current="page">About</a>
+          <a href="contact.html">Contact</a>
+          <a class="btn btn-small" href="booking.html">Book now</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-head">
+        <div class="wrap">
+          <div class="page-head-copy">
+            <h1>About Orenda Spa</h1>
+            <p class="tagline">A sanctuary where beauty meets inner harmony</p>
           </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
-              <a class="text-[#121516] text-sm font-medium leading-normal" href="index.html">Home</a>
-              <a class="text-[#121516] text-sm font-medium leading-normal" href="services.html">Services</a>
-              <a class="text-[#121516] text-sm font-medium leading-normal" href="events.html">Events</a>
-              <a class="text-[#121516] text-sm font-medium leading-normal" href="about.html">About</a>
-              <a class="text-[#121516] text-sm font-medium leading-normal" href="contact.html">Contact</a>
-            </div>
-            <a
-              href="booking.html"
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#b2d8e5] text-[#121516] text-sm font-bold leading-normal tracking-[0.015em]"
-            >
-              <span class="truncate">Book Now</span>
-            </a>
+          <div class="page-head-photo"><img class="shape circle" src="figures/web/smile_laugh_orange.jpg" alt="A woman laughing with her eyes closed, glowing skin" style="object-position: 62% 35%" /></div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap split">
+          <div class="split-copy">
+            <h2>True radiance begins within</h2>
+            <p class="lede">At Orenda Spa, we believe true radiance begins within. Founded by Banyan Xu, a licensed esthetician and former MBA professional, our Maryland-based sanctuary blends science-backed skincare with holistic wellness to help you look and feel your most confident.</p>
+            <p>The name "Orenda" (from the Iroquoian word for "spiritual energy") reflects our philosophy: beauty is more than skin-deep. Here, you'll find curated rituals that harmonize outer glow with inner peace, because when you feel balanced, your confidence shines.</p>
           </div>
-        </header>
-        <!-- 页面内容不变 -->
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="flex flex-wrap justify-between gap-3 p-4">
-              <p class="text-[#121516] tracking-light text-[32px] font-bold leading-tight min-w-72">About Orenda Spa</p>
-              <p class="text-[#85bcb6] text-3xl font-semibold leading-tight text-center"
-                style="font-family: 'Great Vibes', cursive, sans-serif;">
-                A Sanctuary Where Beauty Meets Inner Harmony
-              </p>
-            </div>
-            <p class="text-[#121516] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              At “Orenda Spa”, we believe true radiance begins within. Founded by Banyan Xu—a licensed esthetician and former MBA professional—our Maryland-based sanctuary blends “science-backed skincare” with “holistic wellness” to help you look and feel your most confident.
-            </p>
-            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
-              Our Story: From Boardroom to Treatment Room
-            </h2>
-            <p class="text-[#121516] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              After years in the corporate world, Banyan followed a calling to redefine beauty—one that nurtures “both skin and soul”. Combining a business mindset with advanced esthetics training, they created Orenda Spa as a place where “expertise meets empathy”, and every treatment is designed to “restore, uplift, and empower”.
-            </p>
-            <p class="text-[#121516] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              The name “Orenda” (from the Iroquoian word for “spiritual energy”) reflects our philosophy: “Beauty is more than skin-deep”. Here, you’ll find curated rituals that harmonize outer glow with inner peace—because when you feel balanced, your confidence shines.
-            </p>
-            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
-            <!-- Employee 1: Banyan Xu, Owner -->
-            <div class="flex flex-col gap-3 text-center pb-3">
-              <div class="px-4">
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
-                  style='background-image: url(figures/zirong_.jpg);'
-                ></div>
-              </div>
-              <div>
-                <p class="text-[#121516] text-base font-medium leading-normal">Banyan Xu, MBA, Licensed Esthetician</p>
-                <p class="text-[#6a7b81] text-sm font-normal leading-normal">Owner</p>
-              </div>
-            </div>
-            <!-- Employee 2: Loyee, Technical Supporter -->
-            <div class="flex flex-col gap-3 text-center pb-3">
-              <div class="px-4">
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
-                  style='background-image: url("figures/loyee.jpg");'
-                ></div>
-              </div>
-              <div>
-                <p class="text-[#121516] text-base font-medium leading-normal">Loyee, PhD</p>
-                <p class="text-[#6a7b81] text-sm font-normal leading-normal">Technical Supporter</p>
-              </div>
-            </div>
-          </div>
-            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Why Choose Orenda Spa?</h2>
-            <p class="text-[#121516] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              Licensed &amp; Results-Driven – Maryland-certified treatments tailored to your unique needs.
-            </p>
-            <p class="text-[#121516] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              Soulful Science – A fusion of clinical precision and intuitive care.
-            </p>
-            <p class="text-[#121516] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              Your Safe Haven – A judgment-free zone where self-care is sacred.
-            </p>
-            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Our Promise to You</h2>
-            <p class="text-[#121516] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              Whether you seek relaxation, rejuvenation, or a pre-event glow, we’re here to help you reconnect with your orenda—your innate power and beauty.
-            </p>
-            <div class="flex w-full grow bg-white @container p-4">
-              <div class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[3/2] rounded-xl flex">
-                <div
-                  class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
-                  style='background-image: url("figures/about.jpg");'
-                ></div>
-              </div>
+          <div class="frame frame-tall"><img src="figures/web/about.jpg" alt="A treatment room with candles, dried flowers and skincare products" width="928" height="1141" /></div>
+        </div>
+      </section>
+
+      <!-- Founder -->
+      <section class="band band-cream">
+        <div class="wrap founder">
+          <div class="founder-photo"><img src="figures/web/zirong_.jpg" alt="Banyan Xu, founder of Orenda Spa" width="1080" height="1440" loading="lazy" /></div>
+          <div class="founder-copy">
+            <h2>Our story: from boardroom to treatment room</h2>
+            <p>After years in the corporate world, Banyan followed a calling to redefine beauty, one that nurtures both skin and soul. Combining a business mindset with advanced esthetics training, they created Orenda Spa as a place where expertise meets empathy, and every treatment is designed to restore, uplift, and empower.</p>
+            <div>
+              <p class="founder-name">Banyan Xu, MBA, Licensed Esthetician</p>
+              <p class="small">Founder and owner</p>
             </div>
           </div>
         </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap">
+          <div class="section-head"><h2>Why choose Orenda Spa?</h2></div>
+          <ul class="reasons">
+            <li><h3>Licensed &amp; results-driven</h3><p>Maryland-certified treatments tailored to your unique needs.</p></li>
+            <li><h3>Soulful science</h3><p>A fusion of clinical precision and intuitive care.</p></li>
+            <li><h3>Your safe haven</h3><p>A judgment-free zone where self-care is sacred.</p></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="band band-aqua">
+        <div class="wrap promise">
+          <h2>Our promise to you</h2>
+          <blockquote>Whether you seek relaxation, rejuvenation, or a pre-event glow, we're here to help you reconnect with your orenda: your innate power and beauty.</blockquote>
+          <a class="btn btn-sun" href="booking.html">Book your visit</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (same on every page) -->
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="wordmark">Orenda Spa</p>
+            <p style="margin-top: 14px">The power of nature, in the heart of Rockville.</p>
+            <div class="social">
+              <a href="https://www.instagram.com/orendaspa2025?igsh=anl5M3kyMHd5bG84&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/></svg>
+              </a>
+              <a href="https://www.facebook.com/share/p/1EYyjutKAo/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"/></svg>
+              </a>
+              <a href="https://www.tiktok.com/@orendaspa2025?is_from_webapp=1&amp;sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.389 2.031h3.157a4.185 4.185 0 0 0 4.183 4.174v3.159a7.409 7.409 0 0 1-3.316-.427v7.803c0 3.893-3.158 7.058-7.046 7.058a7.062 7.062 0 1 1 0-14.125c.086 0 .172.004.257.006v3.16a3.899 3.899 0 1 0 3.899 3.899V2.031z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h2>Visit</h2>
+            <div class="footer-list">
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=Orenda+Spa+966+Hungerford+Dr+Rockville+MD+20850" target="_blank" rel="noopener noreferrer">966 Hungerford Dr, 28A Room 3<br />Rockville, MD 20850</a>
+              <a href="tel:+12272683171">(227) 268-3171</a>
+              <a href="mailto:orendaspa2025@gmail.com">orendaspa2025@gmail.com</a>
+              <span>Sunday to Friday, 9:30 AM – 8:30 PM</span>
+            </div>
+          </div>
+          <div>
+            <h2>More</h2>
+            <div class="footer-list">
+              <a href="booking.html">Book an appointment</a>
+              <a href="contact.html">Contact us</a>
+              <button class="link-button" type="button" data-policy="privacy">Privacy policy</button>
+              <button class="link-button" type="button" data-policy="terms">Terms of service</button>
+            </div>
+          </div>
+        </div>
+        <p class="footer-base">© 2025 Orenda Spa. All rights reserved.</p>
       </div>
-    </div>
-  </body>
-  <footer class="flex justify-center">
-  <div class="flex max-w-[960px] flex-1 flex-col">
-    <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
-      <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
-        <a class="text-[#6a7b81] text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
-        <a class="text-[#6a7b81] text-base font-normal leading-normal min-w-40" href="#">Terms of Service</a>
-        <a class="text-[#6a7b81] text-base font-normal leading-normal min-w-40" href="contact.html">Contact Us</a>
-      </div>
-      <div class="flex flex-wrap justify-center gap-4">
-        <!-- Instagram -->
-        <a href="https://www.instagram.com/orendaspa2025?igsh=anl5M3kyMHd5bG84&utm_source=qr" target="_blank" rel="noopener noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-              viewBox="0 0 256 256" class="w-6 h-6 text-[#6a7b81] hover:text-[#b2d8e5] transition">
-            <path
-              d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"/>
-          </svg>
-        </a>
-        <!-- Facebook -->
-        <a href="https://www.facebook.com/share/p/1EYyjutKAo/" target="_blank" rel="noopener noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-              viewBox="0 0 256 256" class="w-6 h-6 text-[#6a7b81] hover:text-[#b2d8e5] transition">
-            <path
-              d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"/>
-          </svg>
-        </a>
-        <!-- Tiktok -->
-        <a href="https://www.tiktok.com/@orendaspa2025?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-              viewBox="0 0 256 256" class="w-6 h-6 text-[#6a7b81] hover:text-[#b2d8e5] transition">
-            <path d="M216,72.7a55.85,55.85,0,0,1-32-10.68V152A80,80,0,1,1,104,72a8,8,0,0,1,0,16,64,64,0,1,0,64,64V32a8,8,0,0,1,8-8h24a8,8,0,0,1,0,16H184v32.43a39.87,39.87,0,0,0,32,13.27,8,8,0,0,1,0,16Z"/>
-          </svg>
-        </a>
-      </div>
-      <p class="text-[#6a7b81] text-base font-normal leading-normal">© 2025 Orenda Spa. All rights reserved.</p>
     </footer>
-  </div>
-</footer>
+
+    <script src="js/site.js"></script>
+  </body>
 </html>
