@@ -42,7 +42,7 @@
         <div class="wrap">
           <div class="page-head-copy">
             <h1>Book an appointment</h1>
-            <p class="lede">Select your desired service, date, and time to schedule your visit.</p>
+            <p class="lede">Select your desired service and date to schedule your visit.</p>
           </div>
           <div class="page-head-photo"><img class="shape circle" src="figures/web/smile_blonde_laugh.jpg" alt="A blonde woman laughing out loud" style="object-position: 50% 25%" /></div>
         </div>
@@ -81,21 +81,6 @@
               <input type="date" name="date" required />
             </label>
 
-            <fieldset>
-              <legend>Available times</legend>
-              <div class="chips">
-                <label><input type="radio" name="time" value="Morning" required /><span>Morning</span></label>
-                <label><input type="radio" name="time" value="Afternoon" /><span>Afternoon</span></label>
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>Therapist <em>(optional)</em></legend>
-              <div class="chips">
-                <label><input type="radio" name="therapist" value="Banyan" /><span>Banyan</span></label>
-              </div>
-            </fieldset>
-
             <label class="field">
               <span>Your name</span>
               <input name="client-name" required autocomplete="name" />
@@ -114,7 +99,7 @@
 
             <div class="btn-row" style="align-items: center">
               <button id="submit-btn" class="btn" type="submit">Book appointment</button>
-              <p class="small">We'll confirm your exact time by email or phone.</p>
+              <p class="small">We'll contact you by email or phone to confirm the time.</p>
             </div>
             <p id="booking-message" class="form-message" role="status"></p>
           </form>

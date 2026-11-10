@@ -18,11 +18,19 @@ app.get('/', (req, res) => {
 });
 
 // 邮箱配置
+// The Gmail app password is NOT stored in this file (the repo is public).
+// Set it on Render: Dashboard -> this service -> Environment -> GMAIL_APP_PASSWORD
+// For local testing: set the same variable in your terminal before `node server.js`.
+const GMAIL_USER = process.env.GMAIL_USER || 'orendaspa2025@gmail.com';
+const GMAIL_APP_PASSWORD = (process.env.GMAIL_APP_PASSWORD || '').replace(/\s+/g, '');
+if (!GMAIL_APP_PASSWORD) {
+  console.warn('GMAIL_APP_PASSWORD is not set: booking and contact emails will fail.');
+}
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'orendaspa2025@gmail.com',
-    pass: 'vtqgwabqnnsobcui'
+    user: GMAIL_USER,
+    pass: GMAIL_APP_PASSWORD
   }
 });
 
@@ -46,13 +54,13 @@ app.post("/send", async (req, res) => {
 
 // 预约接口
 app.post("/api/bookings", async (req, res) => {
-  const { service, date, time, therapist, name, email, phone } = req.body;
+  const { service, date, name, email, phone } = req.body;
   try {
     await transporter.sendMail({
       from: `"Orenda Spa Booking" <orendaspa2025@gmail.com>`,
       to: "orendaspa2025@gmail.com",
       subject: "New Booking from Orenda Spa Website",
-      text: `Service: ${service}\nDate: ${date}\nTime: ${time}\nTherapist: ${therapist}\nName: ${name}\nEmail: ${email}\nPhone: ${phone}`
+      text: `Service: ${service}\nDate: ${date}\nName: ${name}\nEmail: ${email}\nPhone: ${phone}`
     });
     res.json({ success: true, message: "Booking received." });
   } catch (error) {

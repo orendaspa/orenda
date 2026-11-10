@@ -74,13 +74,9 @@
       submitBtn.disabled = true;
       submitBtn.textContent = 'Booking...';
 
-      var time = bookingForm.querySelector('[name="time"]:checked');
-      var therapist = bookingForm.querySelector('[name="therapist"]:checked');
       var data = {
         service: bookingForm.querySelector('[name="service"]').value,
         date: dateInput.value,
-        time: time ? time.value : '',
-        therapist: therapist ? therapist.value : '',
         name: bookingForm.querySelector('[name="client-name"]').value,
         email: bookingForm.querySelector('[name="client-email"]').value,
         phone: bookingForm.querySelector('[name="client-phone"]').value
