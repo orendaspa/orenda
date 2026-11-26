@@ -82,7 +82,8 @@
         phone: bookingForm.querySelector('[name="client-phone"]').value,
         addon: bookingForm.querySelector('[name="addon"]').value,
         referralCode: bookingForm.querySelector('[name="referral-code"]').value.trim().toUpperCase(),
-        referredBy: bookingForm.querySelector('[name="referred-by"]').value.trim()
+        referredBy: bookingForm.querySelector('[name="referred-by"]').value.trim(),
+        message: bookingForm.querySelector('[name="message"]').value.trim()
       };
 
       try {

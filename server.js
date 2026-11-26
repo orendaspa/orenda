@@ -54,12 +54,13 @@ app.post("/send", async (req, res) => {
 
 // 预约接口
 app.post("/api/bookings", async (req, res) => {
-  const { service, date, name, email, phone, addon, referralCode, referredBy } = req.body;
-  // Optional lines: add-on and refer-a-friend details only appear when the client filled them in
+  const { service, date, name, email, phone, addon, referralCode, referredBy, message } = req.body;
+  // Optional lines: add-on, refer-a-friend details and message only appear when the client filled them in
   const extras = [
     addon ? `Add-on: ${addon}` : '',
     referralCode ? `Referral code: ${referralCode}` : '',
-    referredBy ? `Referred by: ${referredBy}` : ''
+    referredBy ? `Referred by: ${referredBy}` : '',
+    message ? `Message: ${message}` : ''
   ].filter(Boolean).map(line => `\n${line}`).join('');
   try {
     await transporter.sendMail({
