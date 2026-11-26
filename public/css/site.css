@@ -407,6 +407,14 @@ fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 10px; }
 .side-card h2 { font-size: clamp(1.6rem, 2.2vw, 1.9rem); }
 .side-note { padding: 16px 20px; border-radius: var(--radius); background: var(--sage-soft); font-size: 0.98rem; }
 
+/* The three booking policies shown above the "Book appointment" button */
+.book-policies { display: grid; gap: 14px; padding: clamp(20px, 2.6vw, 30px); border: 1px solid var(--hair); border-radius: var(--radius); background: var(--paper); }
+.book-policies h2 { font-size: clamp(1.3rem, 1.8vw, 1.5rem); }
+.book-policies ul { display: grid; gap: 10px; font-size: 0.98rem; }
+.book-policies li { position: relative; padding-left: 18px; }
+.book-policies li::before { content: ""; position: absolute; left: 0; top: 0.72em; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+.book-policies strong { font-weight: 500; }
+
 /* ---------- Footer ---------- */
 
 .site-footer { background: var(--sage-soft); color: var(--text); padding-block: clamp(52px, 6vw, 88px) 32px; font-size: 0.98rem; }
