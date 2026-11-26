@@ -58,8 +58,13 @@
                 <optgroup label="Waxing">
                   <option>Brazilian Wax ($50)</option>
                   <option>Bikini Wax ($40)</option>
+                </optgroup>
+                <optgroup label="Service sets">
+                  <option>Brazilian + Underarm Wax ($60)</option>
                   <option>Brazilian + Brow Wax ($60)</option>
+                  <option>Bikini + Underarm Wax ($50)</option>
                   <option>Bikini + Brow Wax ($50)</option>
+                  <option>Brow Wax + Laminate + Tint ($55)</option>
                 </optgroup>
                 <optgroup label="Facials">
                   <option>Acne Treatment Facial ($50)</option>
@@ -73,6 +78,14 @@
                   <option>Lash Lift + Tint ($45)</option>
                   <option>Brow Laminate + Tint ($45)</option>
                 </optgroup>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Add-on <em>(optional)</em></span>
+              <select name="addon">
+                <option value="">No add-on</option>
+                <option>Upper Lip Wax (+$5, with a bikini or Brazilian wax, or any set)</option>
               </select>
             </label>
 
@@ -96,6 +109,19 @@
                 <input name="client-phone" type="tel" required autocomplete="tel" />
               </label>
             </div>
+
+            <!-- Refer a friend: both fields are optional -->
+            <div class="form-pair">
+              <label class="field">
+                <span>Referral code <em>(optional)</em></span>
+                <input name="referral-code" placeholder="ORENDA-UQTFAT" autocomplete="off" autocapitalize="characters" maxlength="24" />
+              </label>
+              <label class="field">
+                <span>Referred by <em>(optional)</em></span>
+                <input name="referred-by" placeholder="Your friend's name" autocomplete="off" maxlength="80" />
+              </label>
+            </div>
+            <p class="small" style="margin-top: -8px">Referred by a friend? Enter the code ORENDA-UQTFAT and your friend's name, and you both get a $5 credit. <a href="events.html#refer">How it works</a></p>
 
             <div class="btn-row" style="align-items: center">
               <button id="submit-btn" class="btn" type="submit">Book appointment</button>

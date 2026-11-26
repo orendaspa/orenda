@@ -79,7 +79,10 @@
         date: dateInput.value,
         name: bookingForm.querySelector('[name="client-name"]').value,
         email: bookingForm.querySelector('[name="client-email"]').value,
-        phone: bookingForm.querySelector('[name="client-phone"]').value
+        phone: bookingForm.querySelector('[name="client-phone"]').value,
+        addon: bookingForm.querySelector('[name="addon"]').value,
+        referralCode: bookingForm.querySelector('[name="referral-code"]').value.trim().toUpperCase(),
+        referredBy: bookingForm.querySelector('[name="referred-by"]').value.trim()
       };
 
       try {

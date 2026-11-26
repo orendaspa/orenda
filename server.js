@@ -54,13 +54,19 @@ app.post("/send", async (req, res) => {
 
 // 预约接口
 app.post("/api/bookings", async (req, res) => {
-  const { service, date, name, email, phone } = req.body;
+  const { service, date, name, email, phone, addon, referralCode, referredBy } = req.body;
+  // Optional lines: add-on and refer-a-friend details only appear when the client filled them in
+  const extras = [
+    addon ? `Add-on: ${addon}` : '',
+    referralCode ? `Referral code: ${referralCode}` : '',
+    referredBy ? `Referred by: ${referredBy}` : ''
+  ].filter(Boolean).map(line => `\n${line}`).join('');
   try {
     await transporter.sendMail({
       from: `"Orenda Spa Booking" <orendaspa2025@gmail.com>`,
       to: "orendaspa2025@gmail.com",
       subject: "New Booking from Orenda Spa Website",
-      text: `Service: ${service}\nDate: ${date}\nName: ${name}\nEmail: ${email}\nPhone: ${phone}`
+      text: `Service: ${service}\nDate: ${date}\nName: ${name}\nEmail: ${email}\nPhone: ${phone}${extras}`
     });
     res.json({ success: true, message: "Booking received." });
   } catch (error) {

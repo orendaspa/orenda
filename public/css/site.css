@@ -206,6 +206,7 @@ p { text-wrap: pretty; }
 .price-row .dots { display: none; }
 .price-row .price { font: 400 1.2rem/1 var(--display); white-space: nowrap; }
 .price-list .note { font-size: 0.9rem; color: var(--muted); line-height: 1.45; }
+.price-row .price s { margin-right: 10px; font: 400 0.92rem/1 var(--body); color: var(--muted); }  /* the crossed-out old price */
 .menu-card .btn { background: transparent; color: var(--text); border-color: var(--text); width: 100%; }
 .menu-card .btn:hover { background: var(--text); color: #fff; }
 
@@ -264,13 +265,41 @@ a.flyer:hover { transform: translateY(-6px); }
 }
 .door > div:first-child { flex: 1 1 420px; display: grid; gap: 8px; }
 
-.special-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(56px, 7vw, 96px) clamp(32px, 6vw, 88px); }
-.special { display: grid; gap: 28px; align-content: start; scroll-margin-top: 120px; }
-.special-copy { display: grid; gap: 12px; justify-items: start; }
-.special-copy h2 { font-size: clamp(1.8rem, 2.6vw, 2.3rem); }
-.price-line { display: flex; align-items: baseline; gap: 14px; }
+.door + .door { margin-top: 20px; }
+
+/* Each offer is a flyer with its text underneath. The price and button sit at the bottom of the card,
+   so they line up across a row even when one description is longer than its neighbours. */
+.special-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(48px, 5vw, 72px) clamp(24px, 3vw, 44px); }
+.special { display: grid; grid-template-rows: auto 1fr; gap: 24px; scroll-margin-top: 120px; }
+.special-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.special-copy h2, .special-copy h3 { font-size: clamp(1.5rem, 2vw, 1.8rem); }
+.special-copy .price-line { margin-top: auto; padding-top: 6px; }
+.price-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; }
 .price-line s { font-size: 1.15rem; color: var(--muted); }
-@media (max-width: 720px) { .special-grid { grid-template-columns: 1fr; } }
+.save { font: 500 0.76rem/1 var(--body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage-deep); }
+@media (max-width: 1000px) { .special-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .special-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Service sets (services page) ---------- */
+
+.set-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2vw, 28px); }
+.set { display: grid; gap: 10px; align-content: start; padding: clamp(22px, 2.6vw, 34px); border-radius: var(--radius); background: var(--butter); scroll-margin-top: 120px; }
+.set-kind { font: 500 0.76rem/1.6 var(--body); letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage-deep); }
+.set .price-line { margin-top: 8px; }
+.set .price-tag { font-size: clamp(1.9rem, 2.8vw, 2.4rem); }
+.set .note { font-size: 0.95rem; color: var(--muted); }
+@media (max-width: 900px) { .set-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .set-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Refer a friend (events page) ---------- */
+
+.refer-flyer { width: min(100%, 460px); justify-self: center; }
+.refer-code { display: grid; gap: 6px; padding: 18px 28px; border: 1px dashed var(--gold); border-radius: var(--radius); background: var(--paper); }
+.refer-code span { font: 500 0.76rem/1.6 var(--body); letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+.refer-code strong { font: 500 clamp(1.5rem, 2.4vw, 2rem)/1.15 var(--display); letter-spacing: 0.08em; color: var(--sage-deep); }
+.refer-steps { display: grid; gap: 12px; counter-reset: step; }
+.refer-steps li { counter-increment: step; display: flex; align-items: baseline; gap: 14px; }
+.refer-steps li::before { content: counter(step); flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--sage); color: #fff; font: 500 0.85rem/28px var(--body); text-align: center; }
 
 /* ---------- Photo trio (yoga) ---------- */
 
